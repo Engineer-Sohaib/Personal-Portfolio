@@ -709,12 +709,10 @@ img { max-width: 100%; height: auto; }
   .skills-hero-label,
   .exp-hero-label,
   .testi-hero-label,
-  .contact-hero-label { font-size: 0.65rem; }
-  .hero-label{
+  .contact-hero-label { font-size: 0.65rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
+    justify-content: center; }
 
   /* ── CTA heading ── */
   .cta-heading,
