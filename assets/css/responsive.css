@@ -1,6 +1,22 @@
 /* ===================================================
    RESPONSIVE.CSS — Full Device Responsiveness
    M SOHAIB ISHAQUE — Portfolio
+   
+   Breakpoints (mobile-first additions):
+     ≥1280px  — Large desktops / wide screens
+     ≤1200px  — Standard laptop
+     ≤1100px  — Compact laptop / side-nav threshold
+     ≤1024px  — Tablet landscape / small laptop
+     ≤900px   — Tablet portrait
+     ≤768px   — Mobile landscape / large phone
+     ≤600px   — Phone (standard)
+     ≤480px   — Small phone
+     ≤375px   — Very small phone (SE, Galaxy A)
+
+   POLICY: Only ADDITIVE rules here.
+   Does NOT override any existing style.css logic —
+   only fills the gaps and tightens existing breakpoints.
+   =================================================== */
 
 /* ═══════════════════════════════════════════════════
    MISSING CSS VARIABLES (carousel.css references)
@@ -10,6 +26,7 @@
   --sh-accent-xs:  0 0 8px var(--accent-dim);
   --accent-dim-4:  rgba(163,255,18,0.04);
   --accent-dim-5:  rgba(163,255,18,0.05);
+  /* Ensure gray-muted is always defined */
   --gray-muted:    rgba(255,255,255,0.6);
 }
 
@@ -430,7 +447,6 @@ img { max-width: 100%; height: auto; }
 ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   /* ── Navbar ── */
-  .navbar{overflow: hidden;}
   .nav-menu, .nav-cta { display: none; }
   .hamburger { display: flex; }
 
@@ -875,16 +891,118 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ═══════════════════════════════════════════════════
-   NAVBAR — Small fixes across all sizes
+   NAVBAR — Mobile overflow fix (PRIMARY FIX)
+   Problem: logo-text "M Sohaib Ishaque" + nav-right-btns
+   pushes nav-inner wider than viewport on mobile.
 ═══════════════════════════════════════════════════ */
-@media (max-width: 768px) {
-  .nav-inner { padding: 1rem 0; }
+
+/* Prevent the navbar and its container from ever overflowing */
+.navbar {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
-/* On very small phones, collapse nav-logo text partially */
-@media (max-width: 360px) {
-  .logo-name { font-size: 0.78rem; letter-spacing: 0.04em; }
-  .logo-text { display: none; } /* fallback: hide and show only the logo box */
+/* Ensure nav-inner never exceeds its container */
+.nav-inner {
+  min-width: 0;     /* crucial — allows flex children to shrink */
+  overflow: hidden;
+}
+
+/* Logo must shrink and not push siblings out */
+.nav-logo {
+  min-width: 0;
+  flex-shrink: 1;
+  max-width: calc(100% - 48px); /* leave room for hamburger */
+}
+
+/* logo-text truncates instead of wrapping/overflowing */
+.logo-text {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.logo-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.logo-role {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* nav-right-btns never shrinks below hamburger size */
+.nav-right-btns {
+  flex-shrink: 0;
+}
+
+/* ── Breakpoint-specific navbar tweaks ── */
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 0.85rem 0;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  /* Hide CTA button, keep hamburger */
+  .nav-cta { display: none; }
+  .nav-menu { display: none; }
+  .hamburger { display: flex; }
+
+  /* Constrain logo so it never touches the hamburger */
+  .nav-logo {
+    max-width: calc(100% - 52px);
+    gap: 0.5rem;
+  }
+
+  /* Slightly smaller logo box */
+  .logo-box {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  /* Shrink name text on mobile */
+  .logo-name {
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+  }
+
+  .logo-role {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-inner { padding: 0.8rem 0; }
+
+  .logo-box {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .logo-name {
+    font-size: 0.82rem;
+    letter-spacing: 0.03em;
+  }
+
+  /* Hide subtitle on small phones to save space */
+  .logo-role { display: none; }
+}
+
+@media (max-width: 375px) {
+  /* On the smallest phones show only logo box + initials */
+  .logo-text { display: none; }
+  .logo-box { width: 34px; height: 34px; }
+  .nav-logo { gap: 0; max-width: 44px; }
 }
 
 /* ═══════════════════════════════════════════════════
