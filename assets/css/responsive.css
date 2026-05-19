@@ -1,0 +1,1160 @@
+/* ===================================================
+   RESPONSIVE.CSS — Full Device Responsiveness
+   M SOHAIB ISHAQUE — Portfolio
+
+/* ═══════════════════════════════════════════════════
+   MISSING CSS VARIABLES (carousel.css references)
+   Add to :root so carousel tokens resolve everywhere.
+═══════════════════════════════════════════════════ */
+:root {
+  --sh-accent-xs:  0 0 8px var(--accent-dim);
+  --accent-dim-4:  rgba(163,255,18,0.04);
+  --accent-dim-5:  rgba(163,255,18,0.05);
+  --gray-muted:    rgba(255,255,255,0.6);
+}
+
+/* ═══════════════════════════════════════════════════
+   GLOBAL BASE FIXES
+═══════════════════════════════════════════════════ */
+* { box-sizing: border-box; }
+
+/* Prevent text overflow on all devices */
+h1, h2, h3, h4, h5, h6,
+.hero-headline,
+.about-hero-heading,
+.projects-hero-heading,
+.skills-hero-heading,
+.exp-hero-heading,
+.testi-hero-heading,
+.contact-hero-heading,
+.section-title,
+.exp-tl-role {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Ensure images never overflow */
+img { max-width: 100%; height: auto; }
+
+/* Container always respects viewport width */
+.container { width: min(var(--max-w), 100% - 2rem); margin-inline: auto; }
+
+/* Section padding: convert 7rem sections to clamp for fluid scaling */
+#about,
+#skills,
+#projects,
+#experience,
+#testimonials,
+#contact {
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+/* ═══════════════════════════════════════════════════
+   LARGE DESKTOP (≥1280px) — make things breathe more
+═══════════════════════════════════════════════════ */
+@media (min-width: 1280px) {
+  .hero-inner,
+  .about-hero-inner,
+  .projects-hero-inner,
+  .skills-hero-inner,
+  .exp-hero-inner {
+    gap: 5rem;
+  }
+
+  .pg-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   STANDARD LAPTOP (≤1200px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 1200px) {
+  /* Hero image — slightly smaller on mid-sized screens */
+  .hero-img-wrap,
+  .about-img-frame,
+  .projects-img-frame,
+  .testi-img-wrap,
+  .exp-img-wrap,
+  .skills-img-wrap {
+    width: 380px;
+    height: 470px;
+  }
+
+  /* Name-card badges — pull inward so they don't clip */
+  .hero-name-card,
+  .about-name-badge,
+  .projects-name-badge,
+  .exp-name-card {
+    right: -10px;
+  }
+
+  /* Footer four-column — tighten gaps */
+  .footer-top {
+    gap: 2rem;
+  }
+
+  /* Projects gallery — 4 cols is too tight here */
+  .pg-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Tools grid — 8 cols gets cramped */
+  .tools-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Other skills — 5 cols → 4 */
+  .other-skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Learning cards — 3 cols stays, but give room */
+  .learning-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Contact main grid — give form more room */
+  .contact-main-grid {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   COMPACT LAPTOP / SIDE NAV THRESHOLD (≤1100px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  /* Back-to-top and customize buttons: move left to avoid clipping */
+  .back-top {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+  .customize {
+    right: 1.5rem;
+    bottom: 5rem;
+  }
+  .customize-panel {
+    right: 5.5rem;
+    bottom: 5rem;
+  }
+
+  /* Projects gallery — 3 → 2 */
+  .pg-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* index projects grid (3 cols) */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Beliefs grid (4 cols) */
+  .beliefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Skills grid on index (4 cols → 2) */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tech skills grid (4 cols → 2) */
+  .tech-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Tools grid */
+  .tools-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* Other skills */
+  .other-skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Timeline item — reduce left column */
+  .timeline-item {
+    grid-template-columns: 160px 1fr;
+    gap: 2rem;
+  }
+
+  /* Section header — stack on narrow laptops */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .section-desc {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  /* Metrics — ensure 2-col on medium screens */
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metric-item { border-right: none; }
+  .metric-item:nth-child(odd) { border-right: 1px solid var(--border); }
+  .metric-item { border-bottom: 1px solid var(--border); }
+  .metric-item:last-child,
+  .metric-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+
+  /* Footer top grid (4 cols → 2) */
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Project details hero */
+  .pd-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .pd-two-col {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   TABLET LANDSCAPE / SMALL LAPTOP (≤1024px)
+   (Extends existing breakpoint in styles.css)
+═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+
+  /* ── All hero sections: single column, centered ── */
+  .hero-inner,
+  .about-hero-inner,
+  .projects-hero-inner,
+  .testi-hero-inner,
+  .exp-hero-inner,
+  .skills-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    padding: 3.5rem 0 3rem;
+  }
+
+  /* Hero image side — centered */
+  .hero-visual,
+  .about-hero-visual,
+  .projects-hero-visual,
+  .testi-hero-right,
+  .exp-hero-visual,
+  .skills-hero-visual {
+    justify-content: center;
+  }
+
+  /* Buttons row — center */
+  .hero-btns,
+  .about-hero .btn-primary,
+  .projects-hero .btn-primary,
+  .testi-hero-left .btn-primary,
+  .exp-hero .btn-primary,
+  .skills-hero .btn-primary {
+    justify-content: center;
+  }
+
+  /* Sub-text max-width when centered */
+  .hero-sub,
+  .about-hero-body,
+  .projects-hero-sub,
+  .testi-hero-sub,
+  .exp-hero-body,
+  .skills-hero-body {
+    margin-inline: auto;
+    max-width: 540px;
+  }
+
+  /* Tech pills — center */
+  .hero-tech,
+  .tech-pills {
+    justify-content: center;
+  }
+
+  /* Image frames */
+  .hero-img-wrap,
+  .about-img-frame,
+  .projects-img-frame,
+  .testi-img-wrap,
+  .exp-img-wrap,
+  .skills-img-wrap {
+    width: 340px;
+    height: 420px;
+    margin: 0 auto;
+  }
+
+  /* Name-cards — inside frame */
+  .hero-name-card,
+  .about-name-badge,
+  .projects-name-badge,
+  .testi-name-card,
+  .exp-name-card,
+  .skills-name-card {
+    right: -20px;
+    bottom: 20px;
+  }
+
+  /* About grid (2 col → 1) */
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+  /* Skills grid (4 → 2) */
+  .skills-grid,
+  .tech-skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr 1fr; }
+
+  /* Metrics */
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .metric-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .metric-item:nth-child(odd) { border-right: 1px solid var(--border); }
+  .metric-item:last-child,
+  .metric-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+
+  /* Testimonials */
+  .testimonials-grid,
+  .testi-cards-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Contact grid */
+  .contact-grid,
+  .contact-main-grid,
+  .edu-certs-grid,
+  .journey-inner,
+  .learning-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+  /* Section side numbers */
+  .section-wrap { padding-left: 0; }
+  .section-side { display: none; }
+
+  /* Projects gallery — 4 → 2 */
+  .pg-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Beliefs */
+  .beliefs-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Experience timeline table */
+  .exp-tl-table { display: block; }
+  .exp-tl-entry { display: grid; grid-template-columns: 130px 60px 1fr; }
+
+  /* Experience highlights */
+  .exp-highlights-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-highlight-item:nth-child(2) { border-right: none; }
+  .exp-highlight-item:nth-child(3),
+  .exp-highlight-item:nth-child(4) { border-top: 1px solid var(--border); }
+  .exp-highlight-item:nth-child(4) { border-right: none; }
+
+  /* Contact map */
+  .contact-map-inner { grid-template-columns: 1fr; }
+  .cmap-info { border-right: none; border-bottom: 1px solid var(--border); }
+  .cmap-visual { min-height: 300px; }
+  #leaflet-map { min-height: 300px; }
+
+  /* Tools grid */
+  .tools-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Other skills */
+  .other-skills-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* learning inner: already goes 1 col via contact-grid above but needs explicit */
+  .learning-cards { grid-template-columns: repeat(2, 1fr); }
+
+  /* Project details impacts */
+  .pd-impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .pd-impact-item:nth-child(2) { border-right: none; }
+  .pd-impact-item:nth-child(1),
+  .pd-impact-item:nth-child(2) { border-bottom: 1px solid var(--border); }
+
+  /* Page-side nav */
+  .page-side-nav { display: none; }
+
+  /* CTA inner wraps */
+  .cta-inner,
+  .exp-cta-inner,
+  .cta-banner-inner,
+  .pd-cta-inner { flex-direction: column; align-items: flex-start; }
+
+  /* Contact quick info */
+  .contact-quick-info { grid-template-columns: 1fr; gap: 0.75rem; }
+
+  /* Timeline */
+  .timeline-item { grid-template-columns: 1fr; gap: 0.75rem; }
+  .timeline { padding-left: 1.5rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   TABLET PORTRAIT (≤900px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .about-mini-stats { flex-wrap: wrap; }
+  .mini-stat { border-bottom: 1px solid var(--border); flex: 0 0 calc(50% - 0px); }
+  .mini-stat:last-child { border-bottom: none; }
+
+  .journey-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .beliefs-grid { grid-template-columns: repeat(2, 1fr); }
+  .edu-certs-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+  /* About image */
+  .about-img-frame { width: 320px; height: 390px; }
+  .about-name-badge { right: -20px; bottom: 30px; }
+
+  /* Experience hero visual */
+  .exp-hero-visual { justify-content: center; }
+
+  /* Skills name card — pull fully inside */
+  .skills-name-card { right: 0; bottom: 0; }
+
+  /* Ticker section gap */
+  .si-ticker-track-wrap { margin-bottom: 14px; }
+
+  /* Tools grid: keep 4 col here */
+  .tools-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* Other skills: 3 → 2 */
+  .other-skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Filter bar — smaller padding */
+  .filter-tab { padding: 0.9rem 0.9rem; font-size: 0.65rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE LANDSCAPE / LARGE PHONE (≤768px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* ── Navbar ── */
+  .nav-menu, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+
+  /* ── Fixed buttons — bottom corners ── */
+  .back-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .customize {
+    bottom: 4.5rem;
+    right: 1.25rem;
+  }
+  .customize-panel {
+    bottom: 4.5rem;
+    right: 5rem;
+    width: calc(100vw - 7rem);
+    max-width: 300px;
+  }
+
+  /* ── Hero images ── */
+  .hero-img-wrap,
+  .about-img-frame,
+  .projects-img-frame,
+  .testi-img-wrap,
+  .exp-img-wrap,
+  .skills-img-wrap {
+    width: 280px;
+    height: 340px;
+  }
+
+  /* ── Grid layouts → single column ── */
+  .projects-grid { grid-template-columns: 1fr; }
+  .skills-grid,
+  .tech-skills-grid { grid-template-columns: 1fr; }
+  .testimonials-grid,
+  .testi-cards-grid { grid-template-columns: 1fr; }
+
+  /* ── Timeline ── */
+  .timeline-item { grid-template-columns: 1fr; gap: 0.75rem; }
+  .timeline { padding-left: 1.5rem; }
+  .timeline-item { padding-left: 1.5rem; }
+
+  /* ── Footer ── */
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+  /* ── Forms ── */
+  .form-row, .cf-row { grid-template-columns: 1fr; }
+
+  /* ── Cursor hidden on touch ── */
+  .cursor, .cursor-ring { display: none; }
+
+  /* ── Projects gallery ── */
+  .pg-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+
+  /* ── Filter bar ── */
+  .filter-tab { padding: 0.9rem 0.9rem; font-size: 0.65rem; }
+
+  /* ── Experience timeline ── */
+  .exp-tl-entry { grid-template-columns: 1fr; }
+  .exp-tl-left { border-right: none; border-bottom: none; padding: 1.5rem 0 0; }
+  .exp-tl-mid { flex-direction: row; justify-content: flex-start; gap: 1rem; padding: 0.5rem 0; }
+  .exp-tl-mid::before { display: none; }
+  .exp-tl-right { padding: 0.75rem 0 1.5rem; }
+
+  /* ── Tools grid ── */
+  .tools-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* ── Other skills ── */
+  .other-skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Learning section ── */
+  .learning-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .learning-cards { grid-template-columns: 1fr; }
+
+  /* ── Project details ── */
+  .pd-features-grid { grid-template-columns: 1fr; }
+  .pd-gallery { grid-template-columns: 1fr 1fr; }
+
+  /* ── CTA banners ── */
+  .cta-inner,
+  .exp-cta-inner,
+  .cta-banner-inner,
+  .pd-cta-inner { flex-direction: column; align-items: flex-start; }
+
+  /* ── About values grid ── */
+  .about-values { grid-template-columns: 1fr; }
+
+  /* ── Metrics: 2 col ── */
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Beliefs: 2 col ── */
+  .beliefs-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Testi section header ── */
+  .testi-section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+  /* ── Contact quick info ── */
+  .contact-quick-info { grid-template-columns: 1fr; }
+
+  /* ── Client logos wrap ── */
+  .clients-logos { flex-wrap: wrap; }
+  .client-logo-item { flex: 0 0 calc(50% - 1px); border-bottom: 1px solid var(--border); }
+
+  /* ── Section title bar ── */
+  .section-title-bar { flex-direction: column; align-items: flex-start; }
+
+  /* ── Mini stats ── */
+  .about-mini-stats { flex-wrap: wrap; }
+  .mini-stat { flex: 0 0 50%; border-right: none !important; border-bottom: 1px solid var(--border); }
+  .mini-stat:nth-child(odd) { border-right: 1px solid var(--border) !important; }
+
+  /* ── Journey section on about ── */
+  .journey-inner { grid-template-columns: 1fr; gap: 2rem; }
+
+  /* ── Section header in index ── */
+  .section-header { flex-direction: column; align-items: flex-start; }
+  .section-desc { text-align: left; }
+
+  /* ── Mobile nav links: reduce font ── */
+  .mobile-nav-link { font-size: 2rem; }
+
+  /* ── Hero grid bg & glow on mobile ── */
+  .hero-glow { opacity: 0.5; }
+
+  /* ── PD impact grid ── */
+  .pd-impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .pd-cta-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ═══════════════════════════════════════════════════
+   STANDARD PHONE (≤600px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  /* ── Typography scaling ── */
+  .hero-headline { font-size: clamp(2.8rem, 12vw, 3.5rem); }
+  .about-hero-heading { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+  .projects-hero-heading { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .skills-hero-heading { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+  .exp-hero-heading { font-size: clamp(2.2rem, 9vw, 3.2rem); }
+  .testi-hero-heading { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .contact-hero-heading { font-size: clamp(2.2rem, 9vw, 3.5rem); }
+  .section-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .pd-title { font-size: clamp(2.2rem, 10vw, 3.5rem); }
+
+  /* ── Container: tighter side padding ── */
+  .container { width: min(var(--max-w), 100% - 1.5rem); }
+
+  /* ── Images: smaller ── */
+  .hero-img-wrap,
+  .about-img-frame,
+  .projects-img-frame,
+  .testi-img-wrap,
+  .exp-img-wrap,
+  .skills-img-wrap {
+    width: 260px;
+    height: 320px;
+  }
+
+  /* ── Metrics: force 2-col ── */
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .metric-item { border-right: none !important; }
+  .metric-item:nth-child(odd) { border-right: 1px solid var(--border) !important; }
+
+  /* ── About values ── */
+  .about-values { grid-template-columns: 1fr; }
+
+  /* ── Beliefs ── */
+  .beliefs-grid { grid-template-columns: 1fr; }
+
+  /* ── Skills grid ── */
+  .skills-grid,
+  .tech-skills-grid { grid-template-columns: 1fr; }
+
+  /* ── Highlights ── */
+  .exp-highlights-grid { grid-template-columns: 1fr 1fr; }
+
+  /* ── Other skills ── */
+  .other-skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Tools grid ── */
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* ── Projects gallery: single column ── */
+  .pg-grid { grid-template-columns: 1fr; }
+
+  /* ── Index projects grid: single column ── */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* ── Testimonials: single column ── */
+  .testimonials-grid,
+  .testi-cards-grid { grid-template-columns: 1fr; }
+
+  /* ── Contact quick info ── */
+  .contact-quick-info { grid-template-columns: 1fr; }
+
+  /* ── Client logos ── */
+  .client-logo-item { flex: 0 0 100%; border-right: none; }
+
+  /* ── Fixed buttons — smaller, closer to corner ── */
+  .back-top {
+    width: 40px;
+    height: 40px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .customize {
+    width: 40px;
+    height: 40px;
+    bottom: 4rem;
+    right: 1rem;
+  }
+  .customize-panel {
+    bottom: 4rem;
+    right: 4.5rem;
+    width: calc(100vw - 2rem);
+    max-width: 260px;
+  }
+
+  /* ── Learning cards ── */
+  .learning-cards { grid-template-columns: 1fr; }
+
+  /* ── Mini stats ── */
+  .about-mini-stats { flex-direction: column; }
+  .mini-stat { flex: 1 1 100%; border-right: none !important; border-bottom: 1px solid var(--border); }
+  .mini-stat:last-child { border-bottom: none; }
+
+  /* ── Hero buttons ── */
+  .hero-btns { flex-direction: column; align-items: center; }
+  .hero-btns .btn { width: 100%; justify-content: center; }
+
+  /* ── Tech pills: center ── */
+  .tech-pills { justify-content: center; }
+
+  /* ── Footer bottom ── */
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-social { justify-content: center; }
+  .footer-top { grid-template-columns: 1fr; }
+
+  /* ── Filter sort button — hide text ── */
+  .filter-sort svg { display: none; }
+
+  /* ── Preloader logo smaller ── */
+  .preloader-logo { font-size: 3rem; }
+  .preloader-bar { width: 160px; }
+
+  /* ── Timeline ── */
+  .timeline-item { padding-left: 1rem; }
+
+  /* ── PD gallery ── */
+  .pd-gallery { grid-template-columns: 1fr; }
+  .pd-impact-grid { grid-template-columns: 1fr 1fr; }
+
+  /* ── Testi name card position ── */
+  .testi-name-card { right: 0; bottom: 0; }
+
+  /* ── Hero label ── */
+  .hero-label,
+  .about-hero-label,
+  .skills-hero-label,
+  .exp-hero-label,
+  .testi-hero-label,
+  .contact-hero-label { font-size: 0.65rem; }
+
+  /* ── CTA heading ── */
+  .cta-heading,
+  .exp-cta-heading,
+  .pd-cta-heading { font-size: clamp(1.5rem, 7vw, 2rem); }
+
+  /* ── Experience highlights ── */
+  .exp-highlights { padding: 1.5rem 1rem 0; }
+  .exp-highlight-item { padding: 1rem; }
+  .exp-highlight-val { font-size: 1.8rem; }
+
+  /* ── Skills name-card: keep inside ── */
+  .skills-name-card { right: 0; min-width: 140px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   SMALL PHONE (≤480px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* ── Container tightest ── */
+  .container { width: min(var(--max-w), 100% - 1rem); }
+
+  /* ── Typography ── */
+  .hero-headline { font-size: clamp(2.4rem, 12vw, 3rem); }
+  .section-title { font-size: clamp(1.6rem, 8vw, 2rem); }
+
+  /* ── Images: minimal ── */
+  .hero-img-wrap,
+  .about-img-frame,
+  .projects-img-frame,
+  .testi-img-wrap,
+  .exp-img-wrap,
+  .skills-img-wrap {
+    width: 240px;
+    height: 300px;
+  }
+
+  /* ── Experience highlights: 1 column ── */
+  .exp-highlights-grid { grid-template-columns: 1fr; }
+  .exp-highlight-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .exp-highlight-item:last-child { border-bottom: none; }
+
+  /* ── Tools: 2-col ── */
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ── Other skills: 1 col ── */
+  .other-skills-grid { grid-template-columns: 1fr; }
+
+  /* ── PD impact ── */
+  .pd-impact-grid { grid-template-columns: 1fr 1fr; }
+
+  /* ── Timeline: ultra compact ── */
+  .timeline { padding-left: 1rem; }
+  .timeline-item { padding-left: 0.75rem; }
+
+  /* ── Filter section ── */
+  .filter-inner { gap: 0; }
+  .filter-tab { padding: 0.75rem 0.65rem; font-size: 0.6rem; }
+
+  /* ── Button widths ── */
+  .btn { padding: 0.65rem 1.25rem; font-size: 0.72rem; }
+
+  /* ── Nav logo text — hide on very small ── */
+  .logo-role { display: none; }
+
+  /* ── Contact map info ── */
+  .cmap-info { padding: 2rem 1.25rem; }
+
+  /* ── Section padding ── */
+  #about,
+  #skills,
+  #projects,
+  #experience,
+  #testimonials,
+  #contact { 
+    padding-top: clamp(3rem, 7vw, 5rem); 
+    padding-bottom: clamp(3rem, 7vw, 5rem);
+  }
+
+  /* Skills page sections */
+  .skills-section { padding: 2.5rem 0; }
+
+  /* Journey section */
+  .journey-section,
+  .beliefs-section,
+  .edu-certs-section { padding: 3.5rem 0; }
+
+  /* Experience sections */
+  .exp-work { padding: 3rem 0; }
+
+  /* Form fields: slightly larger tap targets */
+  .form-input,
+  .form-textarea,
+  .cf-input,
+  .cf-textarea { padding: 0.75rem 0.875rem; font-size: 16px; /* prevents iOS zoom */ }
+
+  /* ── Metric item ── */
+  .metric-item { padding: 1.5rem 1rem; }
+
+  /* Testi section */
+  .testi-section { padding: 3rem 0; }
+}
+
+/* ═══════════════════════════════════════════════════
+   VERY SMALL PHONE (≤375px)
+═══════════════════════════════════════════════════ */
+@media (max-width: 375px) {
+  /* Headline: absolute minimum */
+  .hero-headline { font-size: 2.2rem; }
+  .about-hero-heading,
+  .projects-hero-heading,
+  .skills-hero-heading,
+  .contact-hero-heading,
+  .exp-hero-heading { font-size: 2.2rem; }
+
+  /* Images: smallest */
+  .hero-img-wrap,
+  .about-img-frame,
+  .projects-img-frame,
+  .testi-img-wrap,
+  .exp-img-wrap,
+  .skills-img-wrap {
+    width: 220px;
+    height: 280px;
+  }
+
+  /* Tools: 2 col */
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Filter: minimal */
+  .filter-tab { padding: 0.7rem 0.5rem; font-size: 0.58rem; }
+
+  /* CTA buttons: full width stack */
+  .hero-btns { width: 100%; }
+  .hero-btns .btn { font-size: 0.7rem; }
+
+  /* Name-card badges: minimal */
+  .hero-name-card,
+  .about-name-badge,
+  .projects-name-badge { min-width: 150px; padding: 0.75rem 1rem; }
+  .hero-name-card h3,
+  .about-name-badge h3,
+  .projects-name-badge h3 { font-size: 1.1rem; }
+
+  /* Logo box: smaller */
+  .logo-box { width: 32px; height: 32px; font-size: 0.85rem; }
+  .logo-name { font-size: 0.85rem; }
+
+  /* Customize panel: fill width */
+  .customize-panel {
+    width: calc(100vw - 1.5rem);
+    right: 0.75rem;
+    left: 0.75rem;
+    bottom: 4.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE NAV MENU — Improvements
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .mobile-menu {
+    gap: 1.25rem;
+    padding: 2rem 1.5rem;
+  }
+  .mobile-nav-link {
+    font-size: 2rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-nav-link { font-size: 1.7rem; }
+}
+
+@media (max-width: 375px) {
+  .mobile-nav-link { font-size: 1.5rem; }
+  .mobile-menu { gap: 1rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   NAVBAR — Small fixes across all sizes
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .nav-inner { padding: 1rem 0; }
+}
+
+/* On very small phones, collapse nav-logo text partially */
+@media (max-width: 360px) {
+  .logo-name { font-size: 0.78rem; letter-spacing: 0.04em; }
+  .logo-text { display: none; } /* fallback: hide and show only the logo box */
+}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER — Full responsive chain
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  footer { padding: 2.5rem 0 1.5rem; }
+  .footer-top { gap: 2rem; }
+}
+
+@media (max-width: 480px) {
+  footer { padding: 2rem 0 1.25rem; }
+  .footer-brand p { max-width: 100%; }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   CAROUSEL — Mobile polish
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Ensure swiper doesn't overflow page */
+  .si-swiper { overflow: hidden; }
+
+  /* Pagination dots: ensure visible */
+  .si-swiper-pagination { bottom: 4px !important; }
+
+  /* Ticker: smaller text & items */
+  .si-ticker-label { font-size: 0.7rem; }
+}
+
+@media (max-width: 480px) {
+  /* Ticker items: minimum size */
+  .si-ticker-item { padding: 8px 12px; margin: 0 4px; }
+  .si-ticker-icon,
+  .si-ticker-icon svg,
+  .si-ticker-icon img { width: 20px; height: 20px; }
+  .si-ticker-label { font-size: 0.65rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   SKILLS PAGE — Section-level responsive
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .skills-section { padding: 3rem 0; }
+  .section-title-bar { gap: 0.75rem; }
+}
+
+/* ── Tech skills: 2→1 on phones ── */
+@media (max-width: 600px) {
+  .tech-skills-grid { grid-template-columns: 1fr; }
+  .skill-cat-box { padding: 1.25rem; }
+}
+
+/* ── Other skills: 2→1 on small ── */
+@media (max-width: 480px) {
+  .other-skills-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Tools grid: tightest ── */
+@media (max-width: 360px) {
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ═══════════════════════════════════════════════════
+   PROJECTS PAGE — Filter and gallery
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .filter-section { top: var(--nav-h); }
+  .filter-inner { gap: 0; padding: 0; }
+  .filter-sort { display: none; } /* hide sort on mobile, only show filter tabs */
+  .pg-grid { gap: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  /* Stacked single column cards on phones */
+  .pg-card { min-height: auto; }
+  .pg-thumb { height: 160px; }
+  .pg-body { padding: 1rem; }
+  .pg-name { font-size: 1.1rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   EXPERIENCE PAGE — Timeline & hero
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .exp-work { padding: 3rem 0; }
+  .exp-work-header { flex-direction: column; align-items: flex-start; }
+  .exp-highlights { padding: 1.5rem 1rem 0; }
+  .exp-tl-right { padding: 0.5rem 0 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .exp-tl-role { font-size: 1.25rem; }
+  .exp-tl-desc { font-size: 0.8rem; }
+  .exp-highlights-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .exp-highlights-grid { grid-template-columns: 1fr; }
+  .exp-highlight-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .exp-highlight-item:last-child { border-bottom: none; }
+  .exp-tl-tags { gap: 0.3rem; }
+  .exp-tl-tag { font-size: 0.58rem; padding: 0.15rem 0.5rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   ABOUT PAGE
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .journey-section,
+  .beliefs-section,
+  .edu-certs-section { padding: 4rem 0; }
+
+  /* Journey timeline */
+  .journey-timeline { padding-left: 1.25rem; }
+
+  /* Value cards */
+  .about-values { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .edu-card { flex-direction: column; gap: 0.75rem; }
+  .edu-icon-wrap { width: 40px; height: 40px; }
+  .belief-card { padding: 1.5rem 1.25rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   CONTACT PAGE
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .contact-main { padding: 3rem 0; }
+  .contact-map-inner { grid-template-columns: 1fr; }
+  .cmap-info { border-right: none; border-bottom: 1px solid var(--border); }
+  .ci-socials { flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+  /* Force 16px on inputs to prevent iOS zoom */
+  .form-input,
+  .form-textarea,
+  .cf-input,
+  .cf-textarea { font-size: 16px; }
+
+  .contact-main-grid { gap: 2rem; }
+
+  /* Map: shorter on phones */
+  .cmap-visual,
+  #leaflet-map { min-height: 220px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   TESTIMONIALS PAGE
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .testi-hero { padding: 5rem 0 3rem; }
+  .testi-section { padding: 3rem 0; }
+  .clients-section { padding: 2.5rem 0; }
+}
+
+@media (max-width: 600px) {
+  .testi-card { padding: 1.5rem; }
+  .testi-card-text { font-size: 0.84rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   PROJECT DETAILS PAGE
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .pd-hero { padding-top: calc(var(--nav-h) + 2rem); padding-bottom: 3rem; }
+  .pd-section { padding: 3rem 0; }
+  .pd-tech-icons { flex-wrap: wrap; gap: 0.5rem; }
+  .pd-tech-icon-item { min-width: 70px; padding: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .pd-gallery { grid-template-columns: 1fr; }
+  .pd-tech-table { overflow-x: auto; }
+  .pd-two-col { gap: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .pd-impact-grid { grid-template-columns: 1fr 1fr; }
+  .pd-impact-item { padding: 1.25rem 0.75rem; }
+  .pd-impact-num { font-size: 2rem; }
+  .pd-btns { flex-direction: column; }
+  .pd-btns .btn { width: 100%; justify-content: center; }
+}
+
+/* ═══════════════════════════════════════════════════
+   INDEX PAGE SPECIFIC
+═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* About section on index */
+  #about .about-grid { grid-template-columns: 1fr; }
+
+  /* Project cards on index — already 1 col at 768 from projects-grid */
+
+  /* Skills categories on index */
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Testimonials on index */
+  .testimonials-grid { grid-template-columns: 1fr; }
+
+  /* Experience timeline on index */
+  .timeline { padding-left: 1.25rem; }
+  .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; padding-left: 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  /* Skill categories: 1 col */
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-category { padding: 1.5rem; }
+}
+
+/* ═══════════════════════════════════════════════════
+   PRELOADER — Mobile
+═══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .preloader-logo { font-size: 2.5rem; }
+  .preloader-bar { width: 140px; }
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILITY — Touch / hover interaction fixes
+═══════════════════════════════════════════════════ */
+@media (hover: none) {
+  /* On touch devices, show overlay icons without hover */
+  .pg-overlay { opacity: 0; } /* keep hidden — revealed by tap via JS */
+  .project-card:hover { transform: none; }
+  .pg-card:hover { transform: none; }
+  .value-card:hover { transform: none; }
+  .belief-card:hover { transform: none; }
+  .edu-card:hover { transform: none; }
+  .cert-item:hover { transform: none; }
+  .ci-card:hover { transform: none; }
+  .tech-pill:hover { transform: none; }
+  .social-link:hover { transform: none; }
+}
+
+/* ═══════════════════════════════════════════════════
+   LIGHT THEME — Responsive additions
+   (Complement existing html.theme-light overrides)
+═══════════════════════════════════════════════════ */
+html.theme-light .back-top:hover { background: var(--bg); color: var(--white); }
+html.theme-light .customize:hover { background: var(--bg); color: var(--white); }
+
+html.theme-light .mobile-menu {
+  background: rgba(245,245,245,0.97);
+  border-right: none;
+}
+
+/* ═══════════════════════════════════════════════════
+   PRINT MEDIA — basic cleanup
+═══════════════════════════════════════════════════ */
+@media print {
+  .navbar,
+  .mobile-menu,
+  .back-top,
+  .customize,
+  .customize-panel,
+  .cursor,
+  .cursor-ring,
+  #preloader { display: none !important; }
+
+  body { background: #fff; color: #000; }
+  a { color: #000; }
+  .hero-inner,
+  .about-hero-inner,
+  .projects-hero-inner { grid-template-columns: 1fr; }
+}
