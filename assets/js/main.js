@@ -3,12 +3,12 @@
    M SOHAIB ISHAQUE — Portfolio
 
    LOAD ORDER (add in this order inside each HTML <body>):
-     <script src="js/constants.js"></script>
-     <script src="js/utils.js"></script>
-     <script src="js/animations.js"></script>
-     <script src="js/textures.js"></script>
-     <script src="js/interactions.js"></script>
-     <script src="js/main.js"></script>
+     <script src="./assets/js/constants.js"></script>
+     <script src="./assets/js/utils.js"></script>
+     <script src="./assets/js/animations.js"></script>
+     <script src="./assets/js/textures.js"></script>
+     <script src="./assets/js/interactions.js"></script>
+     <script src="./assets/js/main.js"></script>
 
    OR if keeping a single script.js entry point, concatenate
    the above files in order and replace script.js content.
