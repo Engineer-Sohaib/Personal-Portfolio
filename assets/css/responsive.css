@@ -430,6 +430,7 @@ img { max-width: 100%; height: auto; }
 ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   /* ── Navbar ── */
+  .navbar{overflow: hidden;}
   .nav-menu, .nav-cta { display: none; }
   .hamburger { display: flex; }
 
