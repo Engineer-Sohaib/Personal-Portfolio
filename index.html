@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="M Sohaib Ishaque — Full Stack Web Developer. Angular, .NET Core, React, Node.js, TypeScript. Building digital experiences from Rawalpindi, Pakistan." />
+    <title>M Sohaib Ishaque — Full Stack Web Developer</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->      
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Carousel Styles -->
+    <link rel="stylesheet" href="./css/carousel.css" />
+    <style>
+        .project-thumb-screenshot {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          transition: transform 0.5s ease, filter 0.3s ease;
+          filter: brightness(0.88) saturate(1.05);
+        }
+        .project-card:hover .project-thumb-screenshot {
+          transform: scale(1.05);
+          filter: brightness(0.6) saturate(1.1);
+        }
+    </style>
+
+    <!-- Favicon inline -->
+     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23A3FF12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='14' fill='%23000'%3ESI%3C/text%3E%3C/svg%3E"
+    />
+</head>
+
+<body>
+
+    <!-- ════════════════════════════════════════
+     PRELOADER
+════════════════════════════════════════ -->
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-logo">SI</div>
+        <div class="preloader-bar"></div>
+    </div>
+
+    <!-- ════════════════════════════════════════
+     CUSTOM CURSOR
+════════════════════════════════════════ -->
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════
+     BACK TO TOP
+════════════════════════════════════════ -->
+    <button class="back-top" aria-label="Back to top">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+
+    <!-- ════════════════════════════════════════
+     Customization Tab
+════════════════════════════════════════ -->
+    <button class="customize" id="customizeBtn" aria-label="Customize" aria-expanded="false" aria-controls="customizePanel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.4 15.05L18.3 17.05C18.1 17.4 17.7 17.6 17.3 17.5L15.3 16.95C14.9 17.2 14.5 17.4 14.1 17.55L13.7 19.6C13.6 20 13.3 20.3 12.9 20.3H11.1C10.7 20.3 10.4 20 10.3 19.6L9.9 17.55C9.5 17.4 9.1 17.2 8.7 16.95L6.7 17.5C6.3 17.6 5.9 17.4 5.7 17.05L4.6 15.05C4.4 14.7 4.5 14.3 4.8 14.1L6.4 12.9C6.3 12.6 6.3 12.3 6.3 12C6.3 11.7 6.3 11.4 6.4 11.1L4.8 9.9C4.5 9.7 4.4 9.3 4.6 8.95L5.7 6.95C5.9 6.6 6.3 6.4 6.7 6.5L8.7 7.05C9.1 6.8 9.5 6.6 9.9 6.45L10.3 4.4C10.4 4 10.7 3.7 11.1 3.7H12.9C13.3 3.7 13.6 4 13.7 4.4L14.1 6.45C14.5 6.6 14.9 6.8 15.3 7.05L17.3 6.5C17.7 6.4 18.1 6.6 18.3 6.95L19.4 8.95C19.6 9.3 19.5 9.7 19.2 9.9L17.6 11.1C17.7 11.4 17.7 11.7 17.7 12C17.7 12.3 17.7 12.6 17.6 12.9L19.2 14.1C19.5 14.3 19.6 14.7 19.4 15.05Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- ════════════════════════════════════════
+     Customize Dropdown Panel
+════════════════════════════════════════ -->
+    <div class="customize-panel" id="customizePanel" aria-hidden="true" role="dialog" aria-label="Theme settings">
+
+        <!-- Panel header -->
+        <div class="cp-header">
+            <div class="cp-header-left">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1l1.5 3.5L13 6l-3.5 1.5L8 11 6.5 7.5 3 6l3.5-1.5z" fill="rgba(180,150,255,0.9)" />
+                    <circle cx="13" cy="2" r="1" fill="rgba(180,150,255,0.7)" />
+                </svg>
+                <span>Customization</span>
+            </div>
+            <button class="cp-close" id="customizePanelClose" aria-label="Close customize panel">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <line x1="2" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="12" y1="2" x2="2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Accent line -->
+        <div class="cp-accent-bar" aria-hidden="true"></div>
+        <div class="cp-streak" aria-hidden="true"></div>
+
+        <!-- ── Section: Theme Mode ── -->
+        <p class="cp-section-label">
+            Theme
+        </p>
+
+        <div class="cp-theme-grid" id="cpThemeGrid">
+
+            <!-- Light -->
+            <div class="cp-theme-card" data-theme="light" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dark (default) -->
+            <div class="cp-theme-card active" data-theme="dark" role="radio" aria-checked="true" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.95)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- System -->
+            <div class="cp-theme-card" data-theme="system" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Section: Preset Themes ── -->
+        <div class="cp-presets-header">
+            <div>
+                <p class="cp-section-label" style="margin-bottom:2px">Preset Themes</p>
+            </div>
+        </div>
+
+        <div class="cp-carousel-wrap">
+            <div class="cp-carousel" id="cpSwatchCarousel">
+
+                <div class="cp-swatch" data-swatch="deep-violet">
+                    <div class="cp-swatch-box active" style="background:linear-gradient(135deg,#A3FF12 0%,#89d313 50%,#6ca116 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Deep Violet</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="electric-blue">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#1e40af 0%,#2563eb 50%,#60a5fa 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Electric Blue</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="warm-amber">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#b45309 0%,#f59e0b 50%,#fcd34d 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Warm Amber</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="soft-rose">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#9f1239 0%,#f43f5e 50%,#fda4af 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Soft Rose</div>
+                </div>
+                <div class="cp-swatch" data-swatch="sunset-orange">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#c2410c 0%,#ea580c 50%,#fb923c 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Sunset Orange</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.customize-panel -->
+
+    <!-- ════════════════════════════════════════
+     MOBILE MENU
+════════════════════════════════════════ -->
+    <nav class="mobile-menu" aria-label="Mobile navigation">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="skills.html" class="mobile-nav-link">Skills</a>
+        <a href="projects.html" class="mobile-nav-link">Projects</a>
+        <a href="experience.html" class="mobile-nav-link">Experience</a>
+        <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+    <header class="navbar" role="banner">
+        <div class="container">
+            <div class="nav-inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo" aria-label="M Sohaib Ishaque — Home">
+                    <div class="logo-box" aria-hidden="true">SI</div>
+                    <div class="logo-text">
+                        <span class="logo-name">M Sohaib Ishaque</span>
+                        <span class="logo-role">Full Stack Web Developer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="nav-menu" aria-label="Main navigation">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="testimonials.html" class="nav-link">Testimonials</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- CTA + Hamburger -->
+                <div class="nav-right-btns">
+                    <a href="contact.html" class="nav-cta">
+            Let's Talk
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ════════════════════════════════════════
+     01 — HERO
+════════════════════════════════════════ -->
+    <section id="home" aria-label="Hero">
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="container">
+            <div class="hero-inner">
+
+                <!-- Left: Text -->
+                <div class="hero-content">
+                    <p class="hero-label" aria-hidden="true">Full Stack Web Developer</p>
+
+                    <h1 class="hero-headline">
+          <span class="line-white glitch-word" data-orig="I BUILD">I BUILD</span>
+          <span class="line-white glitch-word" data-orig="DIGITAL">DIGITAL</span>
+          <span class="line-accent glitch-word" data-orig="EXPERIENCES.">EXPERIENCES.</span>
+        </h1>
+
+                    <p class="hero-sub" data-text="I craft fast, responsive and scalable web applications with modern technologies and clean code.">
+                        <!-- filled by typewriter JS -->
+                    </p>
+
+                    <div class="hero-btns">
+                        <a href="projects.html" class="btn btn-primary">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+                        <a href="Sohaib_Ishaque_CV.pdf" download class="btn btn-outline">
+            Download CV
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M8 3v7M5 7l3 3 3-3M3 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+                    </div>
+
+                    <!-- Tech pills -->
+                    <div class="hero-tech">
+                        <p class="hero-tech-label">Technologies I Work With</p>
+                        <div class="tech-pills">
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>React</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>Next.js</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>Angular</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>Node.js</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>TypeScript</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>MongoDB</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>.NET Core</span>
+                            <span class="tech-pill"><span class="tech-pill-dot" aria-hidden="true"></span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Image -->
+                <div class="hero-visual">
+                    <div class="hero-img-wrap">
+                        <div class="hero-img-bg" aria-hidden="true"></div>
+                        <img src="./assets/images/1.png" alt="M Sohaib Ishaque — Full Stack Web Developer" class="hero-img" loading="eager" />
+                        <div class="hero-img-accent" aria-hidden="true"></div>
+
+                        <!-- Name Card -->
+                        <div class="hero-name-card" aria-label="Developer info">
+                            <h3>M Sohaib<br/>Ishaque</h3>
+                            <p>Web Developer</p>
+                        </div>
+
+                        <!-- Decorative geometry -->
+                        <div class="geo-tri geo-tri-1" aria-hidden="true"></div>
+                        <div class="geo-tri geo-tri-2" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     METRICS BAR
+════════════════════════════════════════ -->
+    <section id="metrics" aria-label="Key achievements">
+        <div class="container">
+            <div class="metrics-grid">
+
+                <div class="metric-item reveal">
+                    <div class="metric-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="metric-num"><span data-target="3" data-suffix="+">0+</span></div>
+                        <div class="metric-label">Years Experience</div>
+                    </div>
+                </div>
+
+                <div class="metric-item reveal">
+                    <div class="metric-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="metric-num"><span data-target="15" data-suffix="+">0+</span></div>
+                        <div class="metric-label">Projects Completed</div>
+                    </div>
+                </div>
+
+                <div class="metric-item reveal">
+                    <div class="metric-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="metric-num"><span data-target="100" data-suffix="%">0%</span></div>
+                        <div class="metric-label">Client Satisfaction</div>
+                    </div>
+                </div>
+
+                <div class="metric-item reveal">
+                    <div class="metric-icon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13" />
+                            <path d="M22 16.92v3" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="metric-num">24/7</div>
+                        <div class="metric-label">Support &amp; Availability</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     02 — ABOUT
+════════════════════════════════════════ -->
+    <section id="about" aria-label="About me">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="section-side" aria-hidden="true">
+                    <span class="section-num">02</span>
+                    <span>About</span>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left -->
+                    <div class="reveal-left">
+                        <span class="accent-tag">About Me</span>
+                        <h2 class="about-heading">
+            Passionate About<br/>
+            <strong>Building Solutions</strong>
+          </h2>
+                        <p class="about-body">
+                            I'm a Full Stack Web Developer with 3+ years of professional experience building clean, user-friendly and performant web applications. I specialize in Angular, .NET Core, and modern JavaScript frameworks — turning complex problems into simple, beautiful
+                            and intuitive solutions.
+                        </p>
+                        <p class="about-body">
+                            From enterprise-grade Angular/.NET systems at Media@Marsons Islamabad to .NET desktop and web applications at Oxygen Soft Lahore, I bring cross-domain experience and a relentless focus on delivering quality software that drives real results.
+                        </p>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top:0.5rem">
+            More About Me
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+                    </div>
+
+                    <!-- Right: Values -->
+                    <div class="about-values reveal-right">
+
+                        <div class="value-card">
+                            <div class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                </svg>
+                            </div>
+                            <h3 class="value-title">Clean Code</h3>
+                            <p class="value-desc">Writing maintainable, scalable and efficient code following best practices and design patterns.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                </svg>
+                            </div>
+                            <h3 class="value-title">Performance</h3>
+                            <p class="value-desc">Building fast, optimized applications with great user experience through caching, async programming and query optimization.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                                    <path d="M8 21h8M12 17v4" />
+                                </svg>
+                            </div>
+                            <h3 class="value-title">Responsive</h3>
+                            <p class="value-desc">Creating seamless experiences across all devices and platforms with cross-device compatibility.</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                                    <circle cx="12" cy="17" r=".5" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <h3 class="value-title">Problem Solver</h3>
+                            <p class="value-desc">I love solving complex problems and turning ideas into real-world solutions with creative engineering approaches.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     03 — SKILLS
+════════════════════════════════════════ -->
+    <section id="skills" aria-label="Technical expertise">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="section-side" aria-hidden="true">
+                    <span class="section-num">03</span>
+                    <span>Skills</span>
+                </div>
+
+                <div class="section-header">
+                    <div class="section-title-group reveal-left">
+                        <p class="section-label">Technical Expertise</p>
+                        <h2 class="section-title">My Tech Stack</h2>
+                    </div>
+                    <p class="section-desc reveal">Technologies and tools I use to build modern, scalable and performant applications.</p>
+                </div>
+
+                <div class="skills-grid reveal">
+
+                    <!-- Frontend -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <span class="skill-cat-icon">&lt;/&gt;</span>
+                            <span class="skill-cat-name">Frontend</span>
+                        </div>
+                        <ul class="skill-list" aria-label="Frontend skills">
+                            <li class="skill-item">HTML5 / CSS3</li>
+                            <li class="skill-item">JavaScript (ES6+)</li>
+                            <li class="skill-item">TypeScript</li>
+                            <li class="skill-item">Angular</li>
+                            <li class="skill-item">React.js</li>
+                            <li class="skill-item">Next.js</li>
+                            <li class="skill-item">Bootstrap</li>
+                            <li class="skill-item">Tailwind CSS</li>
+                        </ul>
+                        <div class="skill-cat-bar">
+                            <div class="skill-cat-bar-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <span class="skill-cat-icon">&#9113;</span>
+                            <span class="skill-cat-name">Backend</span>
+                        </div>
+                        <ul class="skill-list" aria-label="Backend skills">
+                            <li class="skill-item">Node.js</li>
+                            <li class="skill-item">Express.js</li>
+                            <li class="skill-item">.NET Core</li>
+                            <li class="skill-item">ASP.NET MVC</li>
+                            <li class="skill-item">C# / Entity Framework</li>
+                            <li class="skill-item">PHP</li>
+                            <li class="skill-item">REST APIs</li>
+                            <li class="skill-item">WordPress</li>
+                        </ul>
+                        <div class="skill-cat-bar">
+                            <div class="skill-cat-bar-fill" data-width="88%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <span class="skill-cat-icon">&#9881;</span>
+                            <span class="skill-cat-name">Tools</span>
+                        </div>
+                        <ul class="skill-list" aria-label="Tools">
+                            <li class="skill-item">Git &amp; GitHub</li>
+                            <li class="skill-item">Docker</li>
+                            <li class="skill-item">Postman</li>
+                            <li class="skill-item">VS Code</li>
+                            <li class="skill-item">Visual Studio</li>
+                            <li class="skill-item">Vercel / Netlify</li>
+                            <li class="skill-item">XAMPP Server</li>
+                            <li class="skill-item">MS SQL / MySQL</li>
+                        </ul>
+                        <div class="skill-cat-bar">
+                            <div class="skill-cat-bar-fill" data-width="85%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Databases & Design -->
+                    <div class="skill-category">
+                        <div class="skill-cat-header">
+                            <span class="skill-cat-icon">&#9642;</span>
+                            <span class="skill-cat-name">Design</span>
+                        </div>
+                        <ul class="skill-list" aria-label="Design skills">
+                            <li class="skill-item">Figma</li>
+                            <li class="skill-item">Adobe Illustrator</li>
+                            <li class="skill-item">Adobe Photoshop</li>
+                            <li class="skill-item">Canva</li>
+                            <li class="skill-item">UI/UX Design</li>
+                            <li class="skill-item">Responsive Design</li>
+                            <li class="skill-item">Graphic Design</li>
+                            <li class="skill-item">Prototyping</li>
+                        </ul>
+                        <div class="skill-cat-bar">
+                            <div class="skill-cat-bar-fill" data-width="80%"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Databases row -->
+                <div style="margin-top:1px;background:var(--border);">
+                    <div class="skill-category" style="background:var(--bg-card);">
+                        <div class="skill-cat-header">
+                            <span class="skill-cat-icon">&#9636;</span>
+                            <span class="skill-cat-name">Databases</span>
+                        </div>
+                        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+                            <span class="tech-pill"><span class="tech-pill-dot"></span>SQL Server</span>
+                            <span class="tech-pill"><span class="tech-pill-dot"></span>MySQL</span>
+                            <span class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</span>
+                            <span class="tech-pill"><span class="tech-pill-dot"></span>Firebase</span>
+                            <span class="tech-pill"><span class="tech-pill-dot"></span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     04 — PROJECTS
+════════════════════════════════════════ -->
+    <section id="projects" aria-label="Featured projects">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="section-side" aria-hidden="true">
+                    <span class="section-num">04</span>
+                    <span>Projects</span>
+                </div>
+
+                <div class="section-header">
+                    <div class="section-title-group reveal-left">
+                        <p class="section-label">Featured Projects</p>
+                        <h2 class="section-title">Selected Work</h2>
+                    </div>
+                    <p class="section-desc reveal">A selection of projects that showcase my skills and problem-solving approach.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card reveal" tabindex="0" aria-label="Al Tahaluf's Website project">
+                        <div class="project-thumb">
+                            <img src="./assets/images/al-tahaluf-.webp" alt="Al Tahaluf's Admin Panel" class="project-thumb-screenshot" loading="lazy" />
+                            <div class="project-num-badge">01</div>
+                            <div class="project-overlay" aria-hidden="true">
+                                <div class="project-overlay-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-category">Enterprise Web Platform</p>
+                            <h3 class="project-name">Al Tahaluf's</h3>
+                            <p class="project-desc">Full enterprise website developed with Angular and .NET Core. Features custom components, reusable Angular directives, RESTful API integration with Entity Framework, interactive admin panel, lazy loading and RxJS state management.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Angular</span>
+                                <span class="project-tag">.NET Core</span>
+                                <span class="project-tag">SQL Server</span>
+                                <span class="project-tag">Entity Framework</span>
+                                <span class="project-tag">RxJS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card reveal" tabindex="0" aria-label="Gossips Social Platform project">
+                        <div class="project-thumb">
+                            <img src="./assets/images/nsric.webp" alt="NSRIC Online Education Platform" class="project-thumb-screenshot" loading="lazy" />
+                            <div class="project-num-badge">02</div>
+                            <div class="project-overlay" aria-hidden="true">
+                                <div class="project-overlay-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-category">Educational Platform</p>
+                            <h3 class="project-name">NSRIC Online Education</h3>
+                            <p class="project-desc">Full website for Nature Science Research and Innovation Centre. Features online course listings, visa consultancy, conference management, dual-timezone clock, student portals and live announcement ticker.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">WordPress</span>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card reveal" tabindex="0" aria-label="Simplicity Trading Academy project">
+                        <div class="project-thumb">
+                            <img src="./assets/images/stack-management.webp" alt="Stock Management System Desktop App" class="project-thumb-screenshot" loading="lazy" />
+                            <div class="project-num-badge">03</div>
+                            <div class="project-overlay" aria-hidden="true">
+                                <div class="project-overlay-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-category">Desktop Application</p>
+                            <h3 class="project-name">Stock Management System</h3>
+                            <p class="project-desc">Windows desktop app for stock inventory management. Features user authentication, sign-up/login flow, inventory tracking, a clean form-based UI and secure SQL Server data persistence using .NET WinForms.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">.NET</span>
+                                <span class="project-tag">WinForms</span>
+                                <span class="project-tag">SQL Server</span>
+                                <span class="project-tag">C#</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card reveal" tabindex="0" aria-label="Online Quiz System project">
+                        <div class="project-thumb">
+                            <img src="./assets/images/online-quiz.webp" alt="Online Quiz System" class="project-thumb-screenshot" loading="lazy" />
+                            <div class="project-num-badge">04</div>
+                            <div class="project-overlay" aria-hidden="true">
+                                <div class="project-overlay-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-category">Web Application</p>
+                            <h3 class="project-name">Online Quiz System</h3>
+                            <p class="project-desc">Feature-rich online quiz platform using .NET, C# and Windows Forms. Includes secure authentication, admin panel for quiz management, multiple question types, time limits, and a backend database for results and analytics.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">.NET</span>
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">SQL Server</span>
+                                <span class="project-tag">Authentication</span>
+                                <span class="project-tag">Admin Panel</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card reveal" tabindex="0" aria-label="QRMF Medical System project">
+                        <div class="project-thumb">
+                            <img src="./assets/images/medical.webp" alt="QRMF Medical Force Website" class="project-thumb-screenshot" loading="lazy" />
+                            <div class="project-num-badge">05</div>
+                            <div class="project-overlay" aria-hidden="true">
+                                <div class="project-overlay-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-category">Medical Information System</p>
+                            <h3 class="project-name">QRMF</h3>
+                            <p class="project-desc">Medical management system built with PHP, MySQL and Bootstrap. Features responsive design, secure authentication, robust database structures for data integrity, phpMyAdmin integration, and JavaScript interactivity.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">MySQL</span>
+                                <span class="project-tag">Bootstrap</span>
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">phpMyAdmin</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card reveal" tabindex="0" aria-label="Simplicity Trading Academy WordPress project">
+                        <div class="project-thumb">
+                            <img src="./assets/images/simplicity.webp" alt="Simplicity Trading Academy Website" class="project-thumb-screenshot" loading="lazy" />
+                            <div class="project-num-badge">06</div>
+                            <div class="project-overlay" aria-hidden="true">
+                                <div class="project-overlay-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        <polyline points="15 3 21 3 21 9" />
+                                        <line x1="10" y1="14" x2="21" y2="3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-category">WordPress Development</p>
+                            <h3 class="project-name">Simplicity Trading WP</h3>
+                            <p class="project-desc">WordPress website for Simplicity Trading Academy. Features membership tiers, 7-day free trial CTA, embedded video, FAQ, contact page and a dark-themed responsive layout optimised for conversion and lead generation.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">WordPress</span>
+                                <span class="project-tag">Elementor</span>
+                                <span class="project-tag">PHP</span>
+                                <span class="project-tag">WooCommerce</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     05 — EXPERIENCE
+════════════════════════════════════════ -->
+    <section id="experience" aria-label="Professional experience">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="section-side" aria-hidden="true">
+                    <span class="section-num">05</span>
+                    <span>Experience</span>
+                </div>
+
+                <div class="section-header">
+                    <div class="section-title-group reveal-left">
+                        <p class="section-label">Career Timeline</p>
+                        <h2 class="section-title">Professional Experience</h2>
+                    </div>
+                </div>
+
+                <div class="timeline">
+
+                    <!-- Job 1 -->
+                    <div class="timeline-item reveal">
+                        <div>
+                            <div class="timeline-date">Dec 2023 — Jan 2025</div>
+                            <div class="timeline-company">
+                                Media@Marsons <span class="dot">•</span> Islamabad
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="timeline-role">Full Stack Web Developer</h3>
+                            <span class="timeline-type">Full-time</span>
+                            <ul class="timeline-points">
+                                <li class="timeline-point">Developed and maintained full-stack web applications using Angular and .NET Core.</li>
+                                <li class="timeline-point">Designed and optimized RESTful APIs using Entity Framework, LINQ, and SQL Server for improved performance.</li>
+                                <li class="timeline-point">Developed dynamic front-end applications using Angular, TypeScript and Bootstrap with responsive design.</li>
+                                <li class="timeline-point">Integrated third-party APIs and services; developed WordPress sites with custom themes and Elementor Pro.</li>
+                                <li class="timeline-point">Collaborated with cross-functional teams to ensure high-quality software delivery on schedule.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="timeline-item reveal">
+                        <div>
+                            <div class="timeline-date">May 2022 — Nov 2023</div>
+                            <div class="timeline-company">
+                                Oxygen Soft <span class="dot">•</span> Lahore
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="timeline-role">.NET Developer &amp; Web Developer</h3>
+                            <span class="timeline-type">Full-time</span>
+                            <ul class="timeline-points">
+                                <li class="timeline-point">Designed and developed .NET Core and Angular-based web applications for enterprise clients.</li>
+                                <li class="timeline-point">Built desktop applications using WPF and WinForms with multi-threading for enhanced performance.</li>
+                                <li class="timeline-point">Created and managed REST APIs for seamless front-end and back-end integration.</li>
+                                <li class="timeline-point">Proficient in HTML, CSS, JavaScript and PHP for building responsive interfaces and server-side development.</li>
+                                <li class="timeline-point">Optimized SQL Server databases for improved data retrieval; managed projects using Git version control.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="timeline-item reveal">
+                        <div>
+                            <div class="timeline-date">May 2021 — Aug 2021</div>
+                            <div class="timeline-company">
+                                Oxygen Soft <span class="dot">•</span> Lahore
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="timeline-role">.NET Developer Intern</h3>
+                            <span class="timeline-type">Internship</span>
+                            <ul class="timeline-points">
+                                <li class="timeline-point">Developed and maintained .NET desktop applications, ensuring optimal performance and scalability.</li>
+                                <li class="timeline-point">Collaborated with teams to analyze requirements, design solutions, and enhance system efficiency.</li>
+                                <li class="timeline-point">Participated in code reviews; implemented features adhering to coding standards and .NET best practices.</li>
+                                <li class="timeline-point">Documented code and processes for seamless knowledge transfer and team onboarding.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     06 — TESTIMONIALS
+════════════════════════════════════════ -->
+    <section id="testimonials" aria-label="Client testimonials">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="section-side" aria-hidden="true">
+                    <span class="section-num">06</span>
+                    <span>Testimonials</span>
+                </div>
+
+                <div class="section-header">
+                    <div class="section-title-group reveal-left">
+                        <p class="section-label">Client Testimonials</p>
+                        <h2 class="section-title">What Clients Say</h2>
+                    </div>
+                    <p class="section-desc reveal">What my clients say about my work and collaboration style.</p>
+                </div>
+
+                <div class="testimonials-grid">
+
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">Sohaib delivered an outstanding project beyond our expectations. His attention to detail and problem-solving skills are excellent. The Angular/.NET integration was flawless and delivered on time. Will definitely work with him again.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">SJ</div>
+                            <div>
+                                <p class="author-name">Sarah Johnson</p>
+                                <p class="author-role">CEO, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">Highly professional and skilled developer. Sohaib communicates well and delivers on time consistently. His expertise in .NET Core and database optimization made our system 40% faster. A genuinely talented full-stack developer.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">MC</div>
+                            <div>
+                                <p class="author-name">Michael Chen</p>
+                                <p class="author-role">Founder, DevStudio</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">Amazing experience! The website is fast, responsive and exactly what we needed. Sohaib understood our requirements perfectly, implemented a beautiful UI with Figma designs, and delivered clean maintainable code. Great work!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">EW</div>
+                            <div>
+                                <p class="author-name">Emma Williams</p>
+                                <p class="author-role">Product Manager, InnovateX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">Amazing experience! The website is fast, responsive and exactly what we needed. Sohaib understood our requirements perfectly, implemented a beautiful UI with Figma designs, and delivered clean maintainable code. Great work!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">EW</div>
+                            <div>
+                                <p class="author-name">Emma Williams</p>
+                                <p class="author-role">Product Manager, InnovateX</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal">
+                        <p class="testimonial-text">Amazing experience! The website is fast, responsive and exactly what we needed. Sohaib understood our requirements perfectly, implemented a beautiful UI with Figma designs, and delivered clean maintainable code. Great work!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" aria-hidden="true">EW</div>
+                            <div>
+                                <p class="author-name">Emma Williams</p>
+                                <p class="author-role">Product Manager, InnovateX</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     07 — CONTACT
+════════════════════════════════════════ -->
+    <section id="contact" aria-label="Contact me">
+        <div class="container">
+            <div class="section-wrap">
+                <div class="section-side" aria-hidden="true">
+                    <span class="section-num">07</span>
+                    <span>Contact</span>
+                </div>
+
+                <div class="section-header">
+                    <div class="section-title-group reveal-left">
+                        <p class="section-label">Get In Touch</p>
+                        <h2 class="section-title">Let's Work Together</h2>
+                    </div>
+                    <p class="section-desc reveal">Have a project in mind or want to collaborate? Let's build something great together.</p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <!-- Left: Info -->
+                    <div class="reveal-left">
+                        <h3 class="contact-heading">
+            Have a project?<br/>
+            <em>Let's talk.</em>
+          </h3>
+                        <p class="contact-sub">I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology. Feel free to reach out.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <a href="mailto:engineer.sohaibishaque@gmail.com">engineer.sohaibishaque@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <span>+92 303-8464315 &nbsp;|&nbsp; +92 317-9227811</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="contact-detail-text">
+                                    <span>Block B, Satellite Town, Rawalpindi, Pakistan</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links" role="list" aria-label="Social media links">
+                            <a href="https://github.com/Sohaib-Ishaque/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+                                    />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/sohaibishaque" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a href="https://engineersohaibishaque.com" class="social-link" aria-label="Website" target="_blank" rel="noopener noreferrer" role="listitem">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </a>
+                            <a href="mailto:engineer.sohaibishaque@gmail.com" class="social-link" aria-label="Email" role="listitem">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="reveal-right">
+                        <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="name">Your Name</label>
+                                    <input class="form-input" type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="email">Your Email</label>
+                                    <input class="form-input" type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="subject">Subject</label>
+                                <input class="form-input" type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="message">Message</label>
+                                <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary form-submit">
+                                Send Message
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <line x1="22" y1="2" x2="11" y2="13" />
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                                </svg>
+                            </button>
+
+                            <div class="form-success" role="alert" aria-live="polite">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                                Message sent successfully! I'll get back to you soon.
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" aria-label="M Sohaib Ishaque Home">
+                        <div class="logo-box" aria-hidden="true">SI</div>
+                        <div class="logo-text">
+                            <span class="logo-name">M Sohaib Ishaque</span>
+                            <span class="logo-role">Full Stack Web Developer</span>
+                        </div>
+                    </a>
+                    <p>Building digital experiences that make an impact. Clean code, modern design, scalable solutions.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <p class="footer-col-title">Quick Links</p>
+                    <nav class="footer-links" aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="projects.html">Projects</a>
+                        <a href="experience.html">Experience</a>
+                        <a href="contact.html">Contact</a>
+                    </nav>
+                </div>
+
+                <!-- Technologies -->
+                <div>
+                    <p class="footer-col-title">Technologies</p>
+                    <nav class="footer-links" aria-label="Technology links">
+                        <a href="skills.html">Angular &amp; React</a>
+                        <a href="skills.html">Next.js</a>
+                        <a href="skills.html">Node.js</a>
+                        <a href="skills.html">TypeScript</a>
+                        <a href="skills.html">MongoDB</a>
+                        <a href="skills.html">Tailwind CSS</a>
+                    </nav>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <p class="footer-col-title">Let's Connect</p>
+                    <div class="footer-social social-links" role="list" aria-label="Social media">
+                        <a href="https://github.com/Sohaib-Ishaque/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+                                />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/sohaibishaque" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="https://engineersohaibishaque.com" class="social-link" aria-label="Website" target="_blank" rel="noopener noreferrer" role="listitem">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:engineer.sohaibishaque@gmail.com" class="social-link" aria-label="Email" role="listitem">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">
+                    &copy; 2024 <span>M Sohaib Ishaque</span>. All rights reserved. &nbsp;|&nbsp; Done Built with passion.
+                </p>
+                <p class="footer-copy">Rawalpindi, Pakistan</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/constants.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/textures.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Carousel -->
+    <script src="js/carousel.js"></script>
+
+</body>
+
+</html>

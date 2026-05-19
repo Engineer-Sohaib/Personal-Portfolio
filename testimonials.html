@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Client testimonials for M Sohaib Ishaque — Full Stack Web Developer. Kind words from amazing people." />
+  <title>Testimonials — M Sohaib Ishaque</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23A3FF12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='14' fill='%23000'%3ESI%3C/text%3E%3C/svg%3E"
+/>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     PRELOADER
+════════════════════════════════════════ -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader-logo">SI</div>
+  <div class="preloader-bar"></div>
+</div>
+
+<!-- ════════════════════════════════════════
+     CUSTOM CURSOR
+════════════════════════════════════════ -->
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ════════════════════════════════════════
+     BACK TO TOP
+════════════════════════════════════════ -->
+<div class="back-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+
+    <!-- ════════════════════════════════════════
+     Customization Tab
+════════════════════════════════════════ -->
+    <button class="customize" id="customizeBtn" aria-label="Customize" aria-expanded="false" aria-controls="customizePanel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.4 15.05L18.3 17.05C18.1 17.4 17.7 17.6 17.3 17.5L15.3 16.95C14.9 17.2 14.5 17.4 14.1 17.55L13.7 19.6C13.6 20 13.3 20.3 12.9 20.3H11.1C10.7 20.3 10.4 20 10.3 19.6L9.9 17.55C9.5 17.4 9.1 17.2 8.7 16.95L6.7 17.5C6.3 17.6 5.9 17.4 5.7 17.05L4.6 15.05C4.4 14.7 4.5 14.3 4.8 14.1L6.4 12.9C6.3 12.6 6.3 12.3 6.3 12C6.3 11.7 6.3 11.4 6.4 11.1L4.8 9.9C4.5 9.7 4.4 9.3 4.6 8.95L5.7 6.95C5.9 6.6 6.3 6.4 6.7 6.5L8.7 7.05C9.1 6.8 9.5 6.6 9.9 6.45L10.3 4.4C10.4 4 10.7 3.7 11.1 3.7H12.9C13.3 3.7 13.6 4 13.7 4.4L14.1 6.45C14.5 6.6 14.9 6.8 15.3 7.05L17.3 6.5C17.7 6.4 18.1 6.6 18.3 6.95L19.4 8.95C19.6 9.3 19.5 9.7 19.2 9.9L17.6 11.1C17.7 11.4 17.7 11.7 17.7 12C17.7 12.3 17.7 12.6 17.6 12.9L19.2 14.1C19.5 14.3 19.6 14.7 19.4 15.05Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- ════════════════════════════════════════
+     Customize Dropdown Panel
+════════════════════════════════════════ -->
+    <div class="customize-panel" id="customizePanel" aria-hidden="true" role="dialog" aria-label="Theme settings">
+
+        <!-- Panel header -->
+        <div class="cp-header">
+            <div class="cp-header-left">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1l1.5 3.5L13 6l-3.5 1.5L8 11 6.5 7.5 3 6l3.5-1.5z" fill="rgba(180,150,255,0.9)" />
+                    <circle cx="13" cy="2" r="1" fill="rgba(180,150,255,0.7)" />
+                </svg>
+                <span>Customization</span>
+            </div>
+            <button class="cp-close" id="customizePanelClose" aria-label="Close customize panel">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <line x1="2" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="12" y1="2" x2="2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Accent line -->
+        <div class="cp-accent-bar" aria-hidden="true"></div>
+        <div class="cp-streak" aria-hidden="true"></div>
+
+        <!-- ── Section: Theme Mode ── -->
+        <p class="cp-section-label">
+            Theme
+        </p>
+
+        <div class="cp-theme-grid" id="cpThemeGrid">
+
+            <!-- Light -->
+            <div class="cp-theme-card" data-theme="light" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dark (default) -->
+            <div class="cp-theme-card active" data-theme="dark" role="radio" aria-checked="true" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.95)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- System -->
+            <div class="cp-theme-card" data-theme="system" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Section: Preset Themes ── -->
+        <div class="cp-presets-header">
+            <div>
+                <p class="cp-section-label" style="margin-bottom:2px">Preset Themes</p>
+            </div>
+        </div>
+
+        <div class="cp-carousel-wrap">
+            <div class="cp-carousel" id="cpSwatchCarousel">
+
+                <div class="cp-swatch" data-swatch="deep-violet">
+                    <div class="cp-swatch-box active" style="background:linear-gradient(135deg,#A3FF12 0%,#89d313 50%,#6ca116 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Deep Violet</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="electric-blue">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#1e40af 0%,#2563eb 50%,#60a5fa 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Electric Blue</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="warm-amber">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#b45309 0%,#f59e0b 50%,#fcd34d 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Warm Amber</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="soft-rose">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#9f1239 0%,#f43f5e 50%,#fda4af 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Soft Rose</div>
+                </div>
+                <div class="cp-swatch" data-swatch="sunset-orange">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#c2410c 0%,#ea580c 50%,#fb923c 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Sunset Orange</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.customize-panel -->
+<!-- ════════════════════════════════════════
+     MOBILE MENU
+════════════════════════════════════════ -->
+<nav class="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html"         class="mobile-nav-link">Home</a>
+  <a href="about.html"         class="mobile-nav-link">About</a>
+  <a href="skills.html"        class="mobile-nav-link">Skills</a>
+  <a href="projects.html"      class="mobile-nav-link">Projects</a>
+  <a href="experience.html"    class="mobile-nav-link">Experience</a>
+  <a href="testimonials.html"  class="mobile-nav-link">Testimonials</a>
+  <a href="contact.html"       class="mobile-nav-link">Contact</a>
+</nav>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header class="navbar" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="M Sohaib Ishaque — Home">
+        <div class="logo-box" aria-hidden="true">SI</div>
+        <div class="logo-text">
+          <span class="logo-name">M Sohaib Ishaque</span>
+          <span class="logo-role">Full Stack Web Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html"         class="nav-link">Home</a>
+        <a href="about.html"         class="nav-link">About</a>
+        <a href="skills.html"        class="nav-link">Skills</a>
+        <a href="projects.html"      class="nav-link">Projects</a>
+        <a href="experience.html"    class="nav-link">Experience</a>
+        <a href="testimonials.html"  class="nav-link active">Testimonials</a>
+        <a href="contact.html"       class="nav-link">Contact</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <a href="contact.html" class="nav-cta">
+        Let's Talk
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════
+     HERO — CLIENT FEEDBACK
+════════════════════════════════════════ -->
+<section class="testi-hero" aria-label="Client feedback hero">
+  <div class="container">
+    <div class="testi-hero-inner">
+
+      <!-- Left: Text -->
+      <div class="testi-hero-left reveal-left">
+        <p class="testi-hero-label">Client Feedback</p>
+
+        <h1 class="testi-hero-heading">
+          <span>Kind Words From</span><br/>
+          <span>Amazing <span class="line-accent">People.</span></span>
+        </h1>
+
+        <p class="testi-hero-sub">
+          I'm grateful to have worked with such incredible clients and teams. Here's what they have to say about our collaboration.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          Let's Work Together
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="testi-hero-right reveal-right">
+        <div class="testi-img-wrap">
+          <img
+            src="./assets/images/1.png"
+            alt="M Sohaib Ishaque — Full Stack Web Developer"
+            class="testi-img"
+            loading="eager"
+          />
+          <div class="testi-img-frame" aria-hidden="true"></div>
+
+          <!-- Name card -->
+          <div class="testi-name-card" aria-label="Developer info">
+            <h3>M Sohaib<br/>Ishaque</h3>
+            <p>Web Developer</p>
+          </div>
+
+          <!-- Decorations -->
+          <span class="testi-plus" aria-hidden="true">+</span>
+          <div class="testi-geo" aria-hidden="true"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CLIENT TESTIMONIALS GRID
+════════════════════════════════════════ -->
+<section class="testi-section" aria-label="Client testimonials">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="testi-section-header">
+      <h2 class="testi-section-title">Client Testimonials</h2>
+      <div class="testi-nav-btns" aria-label="Navigate testimonials">
+        <button class="testi-nav-btn" aria-label="Previous" id="prevBtn">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M10 4L6 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="testi-nav-btn" aria-label="Next" id="nextBtn">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="testi-cards-grid">
+
+      <!-- Card 1 -->
+      <div class="testi-card reveal">
+        <span class="testi-card-quote" aria-hidden="true">"</span>
+        <p class="testi-card-text">
+          Sohaib delivered an outstanding project beyond our expectations. His attention to detail and problem-solving skills are excellent. The Angular/.NET integration was flawless.
+        </p>
+        <div class="testi-card-author">
+          <div class="testi-card-avatar avatar-sj" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="testi-card-name">Sarah Johnson</p>
+            <p class="testi-card-role">CEO, TechCorp</p>
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testi-card reveal">
+        <span class="testi-card-quote" aria-hidden="true">"</span>
+        <p class="testi-card-text">
+          Highly professional and skilled developer. Communicates well and delivers on time. Will definitely work with him again. His .NET expertise made our system significantly faster.
+        </p>
+        <div class="testi-card-author">
+          <div class="testi-card-avatar avatar-mc" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="testi-card-name">Michael Chen</p>
+            <p class="testi-card-role">Founder, DevStudio</p>
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testi-card reveal">
+        <span class="testi-card-quote" aria-hidden="true">"</span>
+        <p class="testi-card-text">
+          Amazing experience! The website is fast, responsive and exactly what we needed. Great work! Sohaib understood our requirements perfectly and delivered on schedule.
+        </p>
+        <div class="testi-card-author">
+          <div class="testi-card-avatar avatar-ew" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="testi-card-name">Emma Williams</p>
+            <p class="testi-card-role">Product Manager, InnovateX</p>
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="testi-card reveal">
+        <span class="testi-card-quote" aria-hidden="true">"</span>
+        <p class="testi-card-text">
+          Great developer with strong technical knowledge. He understood our requirements perfectly and implemented everything flawlessly. Our enterprise app runs without a single issue.
+        </p>
+        <div class="testi-card-author">
+          <div class="testi-card-avatar avatar-dm" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="testi-card-name">David Martinez</p>
+            <p class="testi-card-role">CTO, Webify</p>
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="testi-card reveal">
+        <span class="testi-card-quote" aria-hidden="true">"</span>
+        <p class="testi-card-text">
+          Sohaib's code quality is top-notch and he follows best practices. He is reliable, dedicated and easy to work with. The REST API he built is clean, documented, and performs brilliantly.
+        </p>
+        <div class="testi-card-author">
+          <div class="testi-card-avatar avatar-ja" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="testi-card-name">James Anderson</p>
+            <p class="testi-card-role">Lead, PixelWorks</p>
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="testi-card reveal">
+        <span class="testi-card-quote" aria-hidden="true">"</span>
+        <p class="testi-card-text">
+          He transformed our ideas into a beautiful and functional application. Highly recommended! The WordPress customization exceeded all expectations — creative and technically sound.
+        </p>
+        <div class="testi-card-author">
+          <div class="testi-card-avatar avatar-ob" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <p class="testi-card-name">Olivia Brown</p>
+            <p class="testi-card-role">Marketing Head, Brandify</p>
+            <div class="testi-stars" aria-label="5 out of 5 stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /testi-cards-grid -->
+
+    <!-- View All Reviews -->
+    <div class="view-all-wrap reveal">
+      <a href="contact.html" class="btn-outline-sm">
+        View All Reviews
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CLIENTS I'VE WORKED WITH
+════════════════════════════════════════ -->
+<section class="clients-section" aria-label="Clients">
+  <div class="container">
+    <p class="clients-title">Clients I've Worked With</p>
+    <div class="clients-logos">
+      <div class="client-logo-item">
+        <div class="client-logo-icon">TC</div>
+        TechCorp
+      </div>
+      <div class="client-logo-item">
+        <div class="client-logo-icon">DS</div>
+        DevStudio
+      </div>
+      <div class="client-logo-item">
+        <div class="client-logo-icon">IX</div>
+        InnovateX
+      </div>
+      <div class="client-logo-item">
+        <div class="client-logo-icon">WB</div>
+        Webify
+      </div>
+      <div class="client-logo-item">
+        <div class="client-logo-icon">PW</div>
+        PixelWorks
+      </div>
+      <div class="client-logo-item">
+        <div class="client-logo-icon">BR</div>
+        Brandify
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════ -->
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-banner-inner">
+      <div class="cta-banner-text reveal-left">
+        <h2>Let's Create Something <span class="line-accent">Great Together</span></h2>
+        <p>Have a project in mind or want to collaborate?</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary reveal">
+        Let's Talk
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="M Sohaib Ishaque Home">
+          <div class="logo-box" aria-hidden="true">SI</div>
+          <div class="logo-text">
+            <span class="logo-name">M Sohaib Ishaque</span>
+            <span class="logo-role">Full Stack Web Developer</span>
+          </div>
+        </a>
+        <p>Building digital experiences that make impact. Clean code, modern technologies, and user-focused solutions.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Technologies -->
+      <div>
+        <p class="footer-col-title">Technologies</p>
+        <nav class="footer-links" aria-label="Technology links">
+          <a href="skills.html">React</a>
+          <a href="skills.html">Next.js</a>
+          <a href="skills.html">Node.js</a>
+          <a href="skills.html">TypeScript</a>
+          <a href="skills.html">MongoDB</a>
+          <a href="skills.html">Tailwind CSS</a>
+        </nav>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <p class="footer-col-title">Let's Connect</p>
+        <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem;line-height:1.5;">Available for freelance work and exciting opportunities.</p>
+        <div class="footer-social social-links" role="list" aria-label="Social media">
+          <a href="https://github.com/Sohaib-Ishaque/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/sohaibishaque" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="https://engineersohaibishaque.com" class="social-link" aria-label="Website" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+          <a href="mailto:engineer.sohaibishaque@gmail.com" class="social-link" aria-label="Email" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2024 <span>M Sohaib Ishaque</span>. All rights reserved.
+      </p>
+      <p class="footer-copy">Designed &amp; Built with passion &nbsp;|&nbsp; using Next.js &amp; Tailwind CSS</p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/textures.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

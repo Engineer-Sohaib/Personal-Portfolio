@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Skills — M Sohaib Ishaque. Technologies I work with to build scalable, performant and user-friendly web applications." />
+  <title>Skills — M Sohaib Ishaque</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/carousel.css" />
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23A3FF12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='14' fill='%23000'%3ESI%3C/text%3E%3C/svg%3E"
+/>
+</head>
+<body>
+
+<!-- ── Cursor ── -->
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ── Back to top ── -->
+<button class="back-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+
+    <!-- ════════════════════════════════════════
+     Customization Tab
+════════════════════════════════════════ -->
+    <button class="customize" id="customizeBtn" aria-label="Customize" aria-expanded="false" aria-controls="customizePanel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.4 15.05L18.3 17.05C18.1 17.4 17.7 17.6 17.3 17.5L15.3 16.95C14.9 17.2 14.5 17.4 14.1 17.55L13.7 19.6C13.6 20 13.3 20.3 12.9 20.3H11.1C10.7 20.3 10.4 20 10.3 19.6L9.9 17.55C9.5 17.4 9.1 17.2 8.7 16.95L6.7 17.5C6.3 17.6 5.9 17.4 5.7 17.05L4.6 15.05C4.4 14.7 4.5 14.3 4.8 14.1L6.4 12.9C6.3 12.6 6.3 12.3 6.3 12C6.3 11.7 6.3 11.4 6.4 11.1L4.8 9.9C4.5 9.7 4.4 9.3 4.6 8.95L5.7 6.95C5.9 6.6 6.3 6.4 6.7 6.5L8.7 7.05C9.1 6.8 9.5 6.6 9.9 6.45L10.3 4.4C10.4 4 10.7 3.7 11.1 3.7H12.9C13.3 3.7 13.6 4 13.7 4.4L14.1 6.45C14.5 6.6 14.9 6.8 15.3 7.05L17.3 6.5C17.7 6.4 18.1 6.6 18.3 6.95L19.4 8.95C19.6 9.3 19.5 9.7 19.2 9.9L17.6 11.1C17.7 11.4 17.7 11.7 17.7 12C17.7 12.3 17.7 12.6 17.6 12.9L19.2 14.1C19.5 14.3 19.6 14.7 19.4 15.05Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- ════════════════════════════════════════
+     Customize Dropdown Panel
+════════════════════════════════════════ -->
+    <div class="customize-panel" id="customizePanel" aria-hidden="true" role="dialog" aria-label="Theme settings">
+
+        <!-- Panel header -->
+        <div class="cp-header">
+            <div class="cp-header-left">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1l1.5 3.5L13 6l-3.5 1.5L8 11 6.5 7.5 3 6l3.5-1.5z" fill="rgba(180,150,255,0.9)" />
+                    <circle cx="13" cy="2" r="1" fill="rgba(180,150,255,0.7)" />
+                </svg>
+                <span>Customization</span>
+            </div>
+            <button class="cp-close" id="customizePanelClose" aria-label="Close customize panel">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <line x1="2" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="12" y1="2" x2="2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Accent line -->
+        <div class="cp-accent-bar" aria-hidden="true"></div>
+        <div class="cp-streak" aria-hidden="true"></div>
+
+        <!-- ── Section: Theme Mode ── -->
+        <p class="cp-section-label">
+            Theme
+        </p>
+
+        <div class="cp-theme-grid" id="cpThemeGrid">
+
+            <!-- Light -->
+            <div class="cp-theme-card" data-theme="light" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dark (default) -->
+            <div class="cp-theme-card active" data-theme="dark" role="radio" aria-checked="true" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.95)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- System -->
+            <div class="cp-theme-card" data-theme="system" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Section: Preset Themes ── -->
+        <div class="cp-presets-header">
+            <div>
+                <p class="cp-section-label" style="margin-bottom:2px">Preset Themes</p>
+            </div>
+        </div>
+
+        <div class="cp-carousel-wrap">
+            <div class="cp-carousel" id="cpSwatchCarousel">
+
+                <div class="cp-swatch" data-swatch="deep-violet">
+                    <div class="cp-swatch-box active" style="background:linear-gradient(135deg,#A3FF12 0%,#89d313 50%,#6ca116 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Deep Violet</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="electric-blue">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#1e40af 0%,#2563eb 50%,#60a5fa 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Electric Blue</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="warm-amber">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#b45309 0%,#f59e0b 50%,#fcd34d 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Warm Amber</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="soft-rose">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#9f1239 0%,#f43f5e 50%,#fda4af 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Soft Rose</div>
+                </div>
+                <div class="cp-swatch" data-swatch="sunset-orange">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#c2410c 0%,#ea580c 50%,#fb923c 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Sunset Orange</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.customize-panel -->
+
+<!-- ════════════════════════════════════════
+     MOBILE MENU
+════════════════════════════════════════ -->
+<nav class="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html"       class="mobile-nav-link">Home</a>
+  <a href="about.html"       class="mobile-nav-link">About</a>
+  <a href="skills.html"      class="mobile-nav-link" style="color:var(--accent)">Skills</a>
+  <a href="projects.html"    class="mobile-nav-link">Projects</a>
+  <a href="experience.html"  class="mobile-nav-link">Experience</a>
+  <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+  <a href="contact.html"     class="mobile-nav-link">Contact</a>
+</nav>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header class="navbar scrolled" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <div class="logo-box" aria-hidden="true">SI</div>
+        <div class="logo-text">
+          <span class="logo-name">M Sohaib Ishaque</span>
+          <span class="logo-role">Full Stack Web Developer</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="skills.html"       class="nav-link active">Skills</a>
+        <a href="projects.html"     class="nav-link">Projects</a>
+        <a href="experience.html"   class="nav-link">Experience</a>
+        <a href="testimonials.html" class="nav-link">Testimonials</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </nav>
+
+      <a href="contact.html" class="nav-cta">
+        Let's Talk
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════
+     HERO
+════════════════════════════════════════ -->
+<section class="skills-hero" id="skills-hero" aria-label="Skills hero">
+  <div class="skills-hero-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="skills-hero-inner">
+
+      <!-- Left -->
+      <div class="reveal-left">
+        <div class="skills-hero-label">My Expertise</div>
+
+        <h1 class="skills-hero-heading">
+          Technologies I Work<br/>
+          With To <span class="accent">Build Solutions.</span>
+        </h1>
+
+        <p class="skills-hero-body">
+          I use modern technologies and best practices to build scalable, performant and user-friendly web applications.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">
+          Let's Work Together
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="skills-hero-visual reveal-right">
+        <div class="skills-img-wrap">
+          <div class="skills-img-bg" aria-hidden="true"></div>
+          <img src="./assets/images/1.png" alt="M Sohaib Ishaque" class="skills-img" loading="eager" />
+          <div class="skills-img-accent" aria-hidden="true"></div>
+          <span class="skills-geo-plus" aria-hidden="true">+</span>
+          <div class="skills-name-card" aria-label="Developer info">
+            <h3>M Sohaib<br/>Ishaque</h3>
+            <p>Web Developer</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     TECHNICAL SKILLS
+════════════════════════════════════════ -->
+<section class="skills-section" id="technical-skills" aria-label="Technical skills">
+  <div class="container">
+
+    <div class="section-title-bar">
+      <div class="section-title-left">
+        <h2>Technical Skills</h2>
+        <div class="section-title-underline"></div>
+      </div>
+      <a href="projects.html" class="btn-outline-sm">
+        View My Projects
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="tech-skills-grid" id="skillsGrid">
+
+      <!-- Frontend -->
+      <div class="skill-cat-box reveal">
+        <div class="skill-cat-head">
+          <div class="skill-cat-icon-box" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <span class="skill-cat-title">Frontend</span>
+        </div>
+        <div class="skill-row">
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">HTML5</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">CSS3 / SCSS</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="92"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">TypeScript</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">React.js</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Next.js</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Tailwind CSS</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Bootstrap</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-cat-box reveal">
+        <div class="skill-cat-head">
+          <div class="skill-cat-icon-box" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <span class="skill-cat-title">Backend</span>
+        </div>
+        <div class="skill-row">
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Node.js</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Express.js</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">REST APIs</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="92"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">.NET Core</span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">PHP</span><span class="skill-pct">70%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="70"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">MySQL</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">SQL Server</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">MongoDB</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-cat-box reveal">
+        <div class="skill-cat-head">
+          <div class="skill-cat-icon-box" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <span class="skill-cat-title">Tools</span>
+        </div>
+        <div class="skill-row">
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">VS Code</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Postman</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Docker</span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Vercel</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Netlify</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Figma</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="skill-cat-box reveal">
+        <div class="skill-cat-head">
+          <div class="skill-cat-icon-box" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <span class="skill-cat-title">Design</span>
+        </div>
+        <div class="skill-row">
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Figma</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Adobe XD</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Photoshop</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">UI/UX Design</span><span class="skill-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Responsive Design</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Graphic Design</span><span class="skill-pct">75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div></div>
+          <div class="skill-item-row"><div class="skill-item-top"><span class="skill-name">Prototyping</span><span class="skill-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div></div>
+        </div>
+      </div>
+
+    </div><!-- /tech-skills-grid -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     OTHER SKILLS
+════════════════════════════════════════ -->
+<section class="skills-section" aria-label="Other skills">
+  <div class="container">
+
+    <div class="section-title-bar">
+      <div class="section-title-left">
+        <h2>Other Skills</h2>
+        <div class="section-title-underline"></div>
+      </div>
+    </div>
+
+    <div class="other-skills-grid">
+
+      <div class="other-skill-card reveal">
+        <div class="other-skill-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="other-skill-title">Clean Code</div>
+        <p class="other-skill-desc">Writing maintainable, scalable and efficient code following best practices.</p>
+      </div>
+
+      <div class="other-skill-card reveal">
+        <div class="other-skill-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <div class="other-skill-title">Performance</div>
+        <p class="other-skill-desc">Building fast, optimized applications with great user experience.</p>
+      </div>
+
+      <div class="other-skill-card reveal">
+        <div class="other-skill-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <div class="other-skill-title">Responsive Design</div>
+        <p class="other-skill-desc">Creating seamless experiences across all devices and platforms.</p>
+      </div>
+
+      <div class="other-skill-card reveal">
+        <div class="other-skill-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r=".5" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="other-skill-title">Problem Solving</div>
+        <p class="other-skill-desc">I love solving complex problems and turning ideas into real-world solutions.</p>
+      </div>
+
+      <div class="other-skill-card reveal">
+        <div class="other-skill-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="other-skill-title">Collaboration</div>
+        <p class="other-skill-desc">Working effectively in teams and communicating ideas clearly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     TOOLS & TECHNOLOGIES
+════════════════════════════════════════ -->
+<section class="skills-section si-ticker-section" aria-label="Tools and technologies">
+  <div class="container">
+
+    <div class="section-title-bar">
+      <div class="section-title-left">
+        <h2>Tools &amp; Technologies</h2>
+        <div class="section-title-underline"></div>
+      </div>
+    </div>
+
+  </div><!-- /container — ticker rows are full-bleed below -->
+
+  <!-- ── ROW 1 · Tools · moves LEFT ── -->
+  <div class="si-ticker-track-wrap" aria-label="Development tools">
+    <div class="si-ticker-row-label">Tools</div>
+    <div class="si-ticker-track si-ticker--left" id="ticker-tools" aria-hidden="true">
+      <!-- items injected by carousel.js -->
+    </div>
+  </div>
+
+  <!-- ── ROW 2 · Technologies · moves RIGHT ── -->
+  <div class="si-ticker-track-wrap" aria-label="Technologies">
+    <div class="si-ticker-row-label">Technologies</div>
+    <div class="si-ticker-track si-ticker--right" id="ticker-technologies" aria-hidden="true">
+      <!-- items injected by carousel.js -->
+    </div>
+  </div>
+
+  <!-- ── ROW 3 · AI Tools · moves LEFT ── -->
+  <div class="si-ticker-track-wrap" aria-label="AI tools">
+    <div class="si-ticker-row-label">AI Tools</div>
+    <div class="si-ticker-track si-ticker--left" id="ticker-ai" aria-hidden="true">
+      <!-- items injected by carousel.js -->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="tools-grid" style="display:none !important;">
+
+      <!-- Row 1 -->
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l2.4 26.4L16 33l9.6-2.6L28 4H4z" fill="#E44D26"/><path d="M16 30.4V6H28L25.6 30.4 16 33V30.4z" fill="#F16529"/><path d="M16 13.6H10.4l-.4-4.4H16V5.2H6.4l.4 4.4.8 8.8H16v-4.8zm0 10.4l-.1.1-4.5-1.2-.3-3.2H7l.6 6.4 8.4 2.4V24z" fill="#EBEBEB"/><path d="M16 13.6v4.8h5.2l-.5 5.5-4.7 1.3v5L24.6 28l.2-2 .6-7-.2-4.8H16zm0-8.4v4.4h10.4l-.2-4.4H16z" fill="#fff"/></svg>
+        </div>
+        <span class="tool-label">HTML5</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l2.4 26.4L16 33l9.6-2.6L28 4H4z" fill="#264DE4"/><path d="M16 30.4V6H28L25.6 30.4 16 33V30.4z" fill="#2965F1"/><path d="M16 13.6H10.4l-.4-4.4H16V5.2H6.4l.4 4.4.8 8.8H16v-4.8zm0 10.4l-.1.1-4.5-1.2-.3-3.2H7l.6 6.4 8.4 2.4V24z" fill="#EBEBEB"/><path d="M16 13.6v4.8h5.2l-.5 5.5-4.7 1.3v5L24.6 28l.2-2 .6-7-.2-4.8H16zm0-8.4v4.4h10.4l-.2-4.4H16z" fill="#fff"/></svg>
+        </div>
+        <span class="tool-label">CSS3</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#F0DB4F"/><path d="M9.5 24.4l2.5-1.5c.5.9.95 1.65 2.05 1.65 1.05 0 1.7-.4 1.7-2v-10.8h3.1V22.5c0 3.3-1.9 4.8-4.8 4.8-2.6 0-4.1-1.35-4.55-2.9zm12.1-.35l2.5-1.45c.65 1.1 1.5 1.9 3 1.9 1.25 0 2.05-.63 2.05-1.5 0-1.04-.82-1.4-2.2-2l-.75-.32c-2.17-.92-3.62-2.1-3.62-4.55 0-2.27 1.72-4 4.42-4 1.92 0 3.3.67 4.3 2.42l-2.37 1.52c-.52-.93-1.07-1.3-1.93-1.3-.88 0-1.44.56-1.44 1.3 0 .9.56 1.27 1.86 1.83l.75.32c2.56 1.1 4.02 2.22 4.02 4.74 0 2.72-2.13 4.22-5 4.22-2.8 0-4.6-1.33-5.49-3.13z" fill="#323330"/></svg>
+        </div>
+        <span class="tool-label">JavaScript</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="4" fill="#3178C6"/><path d="M18.3 24.1v2.7c.45.23.98.4 1.6.52.62.12 1.28.18 1.97.18.67 0 1.31-.07 1.91-.21.6-.14 1.13-.37 1.57-.68.44-.31.79-.72 1.04-1.23.25-.51.38-1.13.38-1.86 0-.54-.08-1.01-.23-1.42-.15-.41-.38-.77-.67-1.09-.29-.32-.65-.6-1.07-.85-.42-.25-.9-.48-1.44-.7-.39-.15-.73-.3-1.02-.44-.29-.14-.53-.29-.73-.44-.2-.15-.35-.31-.45-.49-.1-.18-.15-.38-.15-.61 0-.21.05-.4.14-.57.09-.17.22-.31.39-.43.17-.12.37-.21.61-.27.24-.06.5-.09.8-.09.21 0 .43.02.66.05.23.03.46.08.68.15.22.07.43.16.63.27.2.11.38.24.54.39V17c-.32-.12-.68-.21-1.07-.27-.39-.06-.82-.09-1.28-.09-.65 0-1.27.08-1.86.23-.59.15-1.1.39-1.54.71-.44.32-.79.73-1.05 1.23-.26.5-.39 1.09-.39 1.77 0 .88.25 1.62.74 2.24.49.62 1.25 1.13 2.26 1.54.41.16.79.32 1.13.47.34.15.63.31.88.48.25.17.44.35.58.55.14.2.21.43.21.69 0 .2-.04.39-.13.57-.09.18-.22.33-.4.47-.18.14-.4.25-.66.33-.26.08-.57.12-.92.12-.6 0-1.19-.11-1.77-.34-.58-.22-1.1-.57-1.55-1.03zm-5.42-7.48H16v-2.28H7v2.28h3.08V27h2.8V16.62z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">TypeScript</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" fill="#222"/><circle cx="16" cy="16" r="5.5" fill="none" stroke="#61DAFB" stroke-width="1.5"/><ellipse cx="16" cy="16" rx="14" ry="5.5" fill="none" stroke="#61DAFB" stroke-width="1.5"/><ellipse cx="16" cy="16" rx="14" ry="5.5" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(60 16 16)"/><ellipse cx="16" cy="16" rx="14" ry="5.5" fill="none" stroke="#61DAFB" stroke-width="1.5" transform="rotate(120 16 16)"/></svg>
+        </div>
+        <span class="tool-label">React</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#000"/><path d="M18.5 22.3L14 15.7V27H11V9h2.5l5.2 8L24 9h2.5v18H24V15.7l-4.2 6.6h-1.3zM8 9H5v18h3V9z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">Next.js</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#333"/><path d="M16 4C9.37 4 4 9.37 4 16c0 5.3 3.44 9.8 8.2 11.38-.1-.24-.16-.62-.16-1.13v-1.98H10.3s-.58 0-1.16-.57c-.4-.38-.53-.95-.65-1.22-.2-.4-.68-.93-1.1-1.16-.32-.19-.41-.38-.1-.42.9-.12 1.79.66 2.06 1.1.5.84 1.07 1 1.33 1h1.04l.04-.08c.05-.83.43-1.58 1.01-2.1-2.53-.46-3.82-1.94-3.82-4 0-.97.35-1.87.94-2.57-.2-.58-.46-1.77.05-2.73 0 0 .83-.27 2.74 1.05A9.34 9.34 0 0 1 16 12.5c.86 0 1.72.12 2.52.35 1.9-1.32 2.73-1.05 2.73-1.05.5.96.25 2.15.05 2.73.59.7.94 1.6.94 2.57 0 2.06-1.3 3.54-3.84 4 .65.6 1.06 1.44 1.06 2.37v2.76c0 .37-.06.7-.14 1C24.6 25.77 28 21.28 28 16c0-6.63-5.37-12-12-12z" fill="#FAFAFA"/></svg>
+        </div>
+        <span class="tool-label">Node.js</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#404040"/><text x="4" y="22" font-family="sans-serif" font-weight="700" font-size="11" fill="white">Express</text></svg>
+        </div>
+        <span class="tool-label">Express.js</span>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#06B6D4"/><path d="M14.5 8.5C12 8.5 10.5 9.7 9.8 12.1c1.1-1.4 2.3-2 3.7-1.6.8.2 1.4.8 2 1.5.8 1.2 2 1.8 3.4 1.8 2.5 0 4-1.2 4.7-3.6-1.1 1.4-2.3 2-3.7 1.6-.8-.2-1.4-.8-2-1.5-.8-1.2-2-1.8-3.4-1.8zm-5 7.5C7 16 5.5 17.2 4.8 19.6c1.1-1.4 2.3-2 3.7-1.6.8.2 1.4.8 2 1.5.8 1.2 2 1.8 3.4 1.8 2.5 0 4-1.2 4.7-3.6-1.1 1.4-2.3 2-3.7 1.6-.8-.2-1.4-.8-2-1.5-.8-1.2-2-1.8-3.4-1.8z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">Tailwind CSS</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#7952B3"/><path d="M16 7l1.5 4.5H22l-3.5 2.7 1.3 4-3.8-2.7-3.8 2.7 1.3-4L10 11.5h4.5L16 7z" fill="white"/><text x="8" y="26" font-family="sans-serif" font-weight="700" font-size="9" fill="white">Bootstrap</text></svg>
+        </div>
+        <span class="tool-label">Bootstrap</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#F05032"/><path d="M16 5l-1.9 3.8-3.8-.6 2.6 3-1.5 3.6 3.6-1.5 3 2.6-.6-3.8L21 10l-3.8-.6L16 5zm0 10c-4 2-7 5.4-7 8v1h14v-1c0-2.6-3-6-7-8z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">Git</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#24292E"/><path d="M16 4C9.37 4 4 9.37 4 16c0 5.3 3.44 9.8 8.2 11.38-.1-.24-.16-.62-.16-1.13v-1.98H10.3s-.58 0-1.16-.57c-.4-.38-.53-.95-.65-1.22-.2-.4-.68-.93-1.1-1.16-.32-.19-.41-.38-.1-.42.9-.12 1.79.66 2.06 1.1.5.84 1.07 1 1.33 1h1.04l.04-.08c.05-.83.43-1.58 1.01-2.1-2.53-.46-3.82-1.94-3.82-4 0-.97.35-1.87.94-2.57-.2-.58-.46-1.77.05-2.73 0 0 .83-.27 2.74 1.05A9.34 9.34 0 0 1 16 12.5c.86 0 1.72.12 2.52.35 1.9-1.32 2.73-1.05 2.73-1.05.5.96.25 2.15.05 2.73.59.7.94 1.6.94 2.57 0 2.06-1.3 3.54-3.84 4 .65.6 1.06 1.44 1.06 2.37v2.76c0 .37-.06.7-.14 1C24.6 25.77 28 21.28 28 16c0-6.63-5.37-12-12-12z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">GitHub</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#007ACC"/><path d="M8 10.5h4.5L16 16l3.5-5.5H24L18 16l6 5.5h-4.5L16 16l-3.5 5.5H8L14 16 8 10.5z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">VS Code</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#F24E1E"/><path d="M12 20c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4h4v4zm2 0c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4zm4-6c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4v4h4zm-6-4c0 2.2-1.8 4-4 4s-4-1.8-4-4 1.8-4 4-4h4v4zm2 2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">Figma</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#4DB33D"/><path d="M9 8c-2.5 1.5-4 4-4 7 0 5.5 4.5 10 10 10s10-4.5 10-10c0-3-1.5-5.5-4-7-1 3-3 5-6 5s-5-2-6-5zm7-4c-2.5 0-4.5.7-6 2 1 2.5 3 4 6 4s5-1.5 6-4c-1.5-1.3-3.5-2-6-2z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">MongoDB</span>
+      </div>
+
+      <div class="tool-item reveal">
+        <div class="tool-icon">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="5" fill="#00758F"/><path d="M16 6c-5.5 0-10 2-10 4.5v11C6 24 10.5 26 16 26s10-2 10-4.5v-11C26 8 21.5 6 16 6zm0 2c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3zm8 13c0 1.7-3.6 3-8 3s-8-1.3-8-3v-2.4c1.8 1 4.7 1.6 8 1.6s6.2-.6 8-1.6V21zm0-5c0 1.7-3.6 3-8 3s-8-1.3-8-3v-2.4c1.8 1 4.7 1.6 8 1.6s6.2-.6 8-1.6V16z" fill="white"/></svg>
+        </div>
+        <span class="tool-label">MySQL</span>
+      </div>
+
+    </div><!-- /tools-grid hidden -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CONTINUOUS LEARNING
+════════════════════════════════════════ -->
+<section class="skills-section" aria-label="Continuous learning">
+  <div class="container">
+    <div class="learning-inner">
+
+      <!-- Left text -->
+      <div class="reveal-left">
+        <h2 style="font-family:var(--font-body);font-size:1rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--white);margin-bottom:0.5rem;">Continuous Learning</h2>
+        <div class="learning-underline"></div>
+        <p class="learning-desc">
+          I'm always learning new technologies and improving my skills to stay up-to-date in the fast-evolving web development landscape.
+        </p>
+      </div>
+
+      <!-- Right cards -->
+      <div class="learning-cards reveal">
+
+        <div class="learning-card">
+          <div class="learning-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <span class="learning-card-text">Explore modern frameworks and libraries</span>
+        </div>
+
+        <div class="learning-card">
+          <div class="learning-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <span class="learning-card-text">Build real-world projects and solve challenges</span>
+        </div>
+
+        <div class="learning-card">
+          <div class="learning-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <span class="learning-card-text">Read, learn and grow everyday</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Home">
+          <div class="logo-box" aria-hidden="true">SI</div>
+          <div class="logo-text">
+            <span class="logo-name">M Sohaib Ishaque</span>
+            <span class="logo-role">Full Stack Web Developer</span>
+          </div>
+        </a>
+        <p>Building digital experiences that make impact. Clean code, modern technologies, and user-focused solutions.</p>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html" style="color:var(--accent)">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Technologies</p>
+        <nav class="footer-links" aria-label="Technology links">
+          <a href="skills.html">React</a>
+          <a href="skills.html">Next.js</a>
+          <a href="skills.html">Node.js</a>
+          <a href="skills.html">TypeScript</a>
+          <a href="skills.html">MongoDB</a>
+          <a href="skills.html">Tailwind CSS</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Let's Connect</p>
+        <p style="font-size:0.8rem;color:var(--gray);margin-bottom:1rem;line-height:1.5;">Available for freelance work and exciting opportunities.</p>
+        <div class="social-links" role="list" aria-label="Social media">
+          <a href="https://github.com/Sohaib-Ishaque/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/sohaibishaque" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="https://engineersohaibishaque.com" class="social-link" aria-label="Website" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+          <a href="mailto:engineer.sohaibishaque@gmail.com" class="social-link" aria-label="Email" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2024 <span>M Sohaib Ishaque</span>. All rights reserved.</p>
+      <p class="footer-copy" style="display:flex;align-items:center;gap:0.4rem;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Designed &amp; Built with passion &nbsp;|&nbsp; using HTML, CSS &amp; JavaScript
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/textures.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

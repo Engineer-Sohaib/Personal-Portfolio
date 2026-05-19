@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About M Sohaib Ishaque — Full Stack Web Developer. My journey, values, education and certifications." />
+  <title>About — M Sohaib Ishaque</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23A3FF12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='14' fill='%23000'%3ESI%3C/text%3E%3C/svg%3E"
+/>
+</head>
+<body>
+
+<!-- ── Cursor ── -->
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ── Back to top ── -->
+<button class="back-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+
+    <!-- ════════════════════════════════════════
+     Customization Tab
+════════════════════════════════════════ -->
+    <button class="customize" id="customizeBtn" aria-label="Customize" aria-expanded="false" aria-controls="customizePanel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.4 15.05L18.3 17.05C18.1 17.4 17.7 17.6 17.3 17.5L15.3 16.95C14.9 17.2 14.5 17.4 14.1 17.55L13.7 19.6C13.6 20 13.3 20.3 12.9 20.3H11.1C10.7 20.3 10.4 20 10.3 19.6L9.9 17.55C9.5 17.4 9.1 17.2 8.7 16.95L6.7 17.5C6.3 17.6 5.9 17.4 5.7 17.05L4.6 15.05C4.4 14.7 4.5 14.3 4.8 14.1L6.4 12.9C6.3 12.6 6.3 12.3 6.3 12C6.3 11.7 6.3 11.4 6.4 11.1L4.8 9.9C4.5 9.7 4.4 9.3 4.6 8.95L5.7 6.95C5.9 6.6 6.3 6.4 6.7 6.5L8.7 7.05C9.1 6.8 9.5 6.6 9.9 6.45L10.3 4.4C10.4 4 10.7 3.7 11.1 3.7H12.9C13.3 3.7 13.6 4 13.7 4.4L14.1 6.45C14.5 6.6 14.9 6.8 15.3 7.05L17.3 6.5C17.7 6.4 18.1 6.6 18.3 6.95L19.4 8.95C19.6 9.3 19.5 9.7 19.2 9.9L17.6 11.1C17.7 11.4 17.7 11.7 17.7 12C17.7 12.3 17.7 12.6 17.6 12.9L19.2 14.1C19.5 14.3 19.6 14.7 19.4 15.05Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- ════════════════════════════════════════
+     Customize Dropdown Panel
+════════════════════════════════════════ -->
+    <div class="customize-panel" id="customizePanel" aria-hidden="true" role="dialog" aria-label="Theme settings">
+
+        <!-- Panel header -->
+        <div class="cp-header">
+            <div class="cp-header-left">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1l1.5 3.5L13 6l-3.5 1.5L8 11 6.5 7.5 3 6l3.5-1.5z" fill="rgba(180,150,255,0.9)" />
+                    <circle cx="13" cy="2" r="1" fill="rgba(180,150,255,0.7)" />
+                </svg>
+                <span>Customization</span>
+            </div>
+            <button class="cp-close" id="customizePanelClose" aria-label="Close customize panel">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <line x1="2" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="12" y1="2" x2="2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Accent line -->
+        <div class="cp-accent-bar" aria-hidden="true"></div>
+        <div class="cp-streak" aria-hidden="true"></div>
+
+        <!-- ── Section: Theme Mode ── -->
+        <p class="cp-section-label">
+            Theme
+        </p>
+
+        <div class="cp-theme-grid" id="cpThemeGrid">
+
+            <!-- Light -->
+            <div class="cp-theme-card" data-theme="light" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dark (default) -->
+            <div class="cp-theme-card active" data-theme="dark" role="radio" aria-checked="true" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.95)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- System -->
+            <div class="cp-theme-card" data-theme="system" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Section: Preset Themes ── -->
+        <div class="cp-presets-header">
+            <div>
+                <p class="cp-section-label" style="margin-bottom:2px">Preset Themes</p>
+            </div>
+        </div>
+
+        <div class="cp-carousel-wrap">
+            <div class="cp-carousel" id="cpSwatchCarousel">
+
+                <div class="cp-swatch" data-swatch="deep-violet">
+                    <div class="cp-swatch-box active" style="background:linear-gradient(135deg,#A3FF12 0%,#89d313 50%,#6ca116 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Deep Violet</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="electric-blue">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#1e40af 0%,#2563eb 50%,#60a5fa 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Electric Blue</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="warm-amber">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#b45309 0%,#f59e0b 50%,#fcd34d 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Warm Amber</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="soft-rose">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#9f1239 0%,#f43f5e 50%,#fda4af 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Soft Rose</div>
+                </div>
+                <div class="cp-swatch" data-swatch="sunset-orange">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#c2410c 0%,#ea580c 50%,#fb923c 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Sunset Orange</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.customize-panel -->
+
+<!-- ════════════════════════════════════════
+     MOBILE MENU
+════════════════════════════════════════ -->
+<nav class="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html"         class="mobile-nav-link">Home</a>
+  <a href="about.html"         class="mobile-nav-link" style="color:var(--accent)">About</a>
+  <a href="skills.html"        class="mobile-nav-link">Skills</a>
+  <a href="projects.html"      class="mobile-nav-link">Projects</a>
+  <a href="experience.html"    class="mobile-nav-link">Experience</a>
+  <a href="testimonials.html"  class="mobile-nav-link">Testimonials</a>
+  <a href="contact.html"       class="mobile-nav-link">Contact</a>
+</nav>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════ -->
+<header class="navbar scrolled" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <div class="logo-box" aria-hidden="true">SI</div>
+        <div class="logo-text">
+          <span class="logo-name">M Sohaib Ishaque</span>
+          <span class="logo-role">Full Stack Web Developer</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html"         class="nav-link">Home</a>
+        <a href="about.html"         class="nav-link active">About</a>
+        <a href="skills.html"        class="nav-link">Skills</a>
+        <a href="projects.html"      class="nav-link">Projects</a>
+        <a href="experience.html"    class="nav-link">Experience</a>
+        <a href="testimonials.html"  class="nav-link">Testimonials</a>
+        <a href="contact.html"       class="nav-link">Contact</a>
+      </nav>
+
+      <a href="contact.html" class="nav-cta">
+        Let's Talk
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════
+     ABOUT HERO
+════════════════════════════════════════ -->
+<section class="about-hero" id="about-hero" aria-label="About hero">
+  <div class="about-hero-bg" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="about-hero-inner">
+
+      <!-- Left: Content -->
+      <div class="reveal-left">
+        <span class="accent-tag">About Me</span>
+
+        <h1 class="about-hero-heading">
+          Passionate About<br/>
+          Building <span class="green">Solutions.</span>
+        </h1>
+
+        <p class="about-hero-body">
+          I'm a Full Stack Web Developer who loves building clean, user-friendly and performant web applications. I enjoy turning complex problems into simple, beautiful and intuitive solutions. With 3+ years of professional experience across enterprise Angular/.NET systems and versatile web platforms, I bring both depth and breadth to every project.
+        </p>
+
+        <a href="Sohaib_Ishaque_CV.pdf" download class="btn btn-primary">
+          Download CV
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 3v7M5 7l3 3 3-3M3 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- Mini Stats -->
+        <div class="about-mini-stats reveal">
+          <div class="mini-stat">
+            <div class="mini-stat-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="mini-stat-num"><span data-target="3" data-suffix="+">3+</span></div>
+              <div class="mini-stat-label">Years of<br/>Experience</div>
+            </div>
+          </div>
+
+          <div class="mini-stat">
+            <div class="mini-stat-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div>
+              <div class="mini-stat-num"><span data-target="15" data-suffix="+">15+</span></div>
+              <div class="mini-stat-label">Projects<br/>Completed</div>
+            </div>
+          </div>
+
+          <div class="mini-stat">
+            <div class="mini-stat-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="mini-stat-num"><span data-target="100" data-suffix="%">100%</span></div>
+              <div class="mini-stat-label">Client<br/>Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="about-hero-visual reveal-right">
+        <div class="about-img-frame">
+          <img
+            src="./assets/images/1.png"
+            alt="M Sohaib Ishaque — Full Stack Web Developer"
+            class="about-img-main"
+            loading="eager"
+          />
+          <div class="about-img-border" aria-hidden="true"></div>
+          <span class="about-plus-tl" aria-hidden="true">+</span>
+          <span class="about-plus-br" aria-hidden="true">+</span>
+
+          <!-- Name Badge -->
+          <div class="about-name-badge">
+            <h3>M Sohaib<br/>Ishaque</h3>
+            <p>Web Developer</p>
+          </div>
+
+          <!-- Diagonal geo accent -->
+          <div class="about-diag" aria-hidden="true"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     MY JOURNEY
+════════════════════════════════════════ -->
+<section class="journey-section" id="journey" aria-label="My journey">
+  <div class="container">
+    <div class="journey-inner">
+
+      <!-- Left: story -->
+      <div class="reveal-left">
+        <h2 class="journey-heading">My Journey</h2>
+        <div class="journey-heading-underline" aria-hidden="true"></div>
+
+        <p class="journey-body">
+          My journey into web development started with curiosity and a passion for creating things that live on the internet. Over time, that curiosity turned into a career where I get to solve problems, learn constantly and build meaningful digital experiences.
+        </p>
+        <p class="journey-body">
+          I believe in writing clean code, following best practices and always pushing myself to grow. From my early days as an intern at Oxygen Soft to leading full-stack projects at Media@Marsons Islamabad, every step has sharpened my craft and deepened my commitment to delivering quality software.
+        </p>
+
+        <a href="contact.html" class="btn btn-outline" style="margin-top:0.5rem">
+          Let's Work Together
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right: Timeline -->
+      <div class="journey-timeline reveal-right">
+
+        <div class="jt-item">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-date">2021 — 2022</div>
+          <h3 class="jt-role">Web Developer Intern</h3>
+          <p class="jt-desc">Assisted in front-end development and UI implementation for various web applications at Oxygen Soft, Lahore. Built foundational skills in .NET, HTML/CSS and JavaScript while following clean code standards and participating in code reviews.</p>
+        </div>
+
+        <div class="jt-item">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-date">2022 — 2023</div>
+          <h3 class="jt-role">.NET Developer &amp; Web Developer</h3>
+          <p class="jt-desc">Worked on client projects at Oxygen Soft as a full developer, collaborated with designers and implemented responsive interfaces. Built .NET Core and Angular web apps, desktop applications with WPF/WinForms, REST APIs and WordPress solutions.</p>
+        </div>
+
+        <div class="jt-item">
+          <div class="jt-dot" aria-hidden="true"></div>
+          <div class="jt-date">2023 — Present</div>
+          <h3 class="jt-role">Full Stack Web Developer</h3>
+          <p class="jt-desc">Building robust full-stack web applications at Media@Marsons, Islamabad using Angular and .NET Core. Leading projects, delivering high-quality solutions, optimizing RESTful APIs with Entity Framework and driving 100% client satisfaction across all engagements.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     WHAT I BELIEVE IN
+════════════════════════════════════════ -->
+<section class="beliefs-section" id="beliefs" aria-label="What I believe in">
+  <div class="container">
+
+    <h2 class="beliefs-heading reveal">What I Believe In</h2>
+    <div class="beliefs-underline reveal" aria-hidden="true"></div>
+
+    <div class="beliefs-grid">
+
+      <!-- Clean Code -->
+      <div class="belief-card reveal">
+        <div class="belief-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <h3 class="belief-title">Clean Code</h3>
+        <p class="belief-desc">Writing maintainable, scalable and efficient code following best practices, design patterns and SOLID principles.</p>
+      </div>
+
+      <!-- Continuous Growth -->
+      <div class="belief-card reveal">
+        <div class="belief-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="belief-title">Continuous Growth</h3>
+        <p class="belief-desc">Always learning new technologies and improving my skills to stay ahead. The tech landscape evolves — so do I.</p>
+      </div>
+
+      <!-- User First -->
+      <div class="belief-card reveal">
+        <div class="belief-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h3 class="belief-title">User First</h3>
+        <p class="belief-desc">Building with the end user in mind to create seamless, valuable and intuitive experiences across all devices and platforms.</p>
+      </div>
+
+      <!-- Collaboration -->
+      <div class="belief-card reveal">
+        <div class="belief-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3 class="belief-title">Collaboration</h3>
+        <p class="belief-desc">I value teamwork and believe great results come from great collaboration. Clear communication and shared ownership drive excellence.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     EDUCATION & CERTIFICATIONS
+════════════════════════════════════════ -->
+<section class="edu-certs-section" id="education" aria-label="Education and certifications">
+  <div class="container">
+    <div class="edu-certs-grid">
+
+      <!-- Education -->
+      <div class="reveal-left">
+        <h2 class="edu-section-heading">Education</h2>
+        <div class="edu-underline" aria-hidden="true"></div>
+
+        <div class="edu-card" style="margin-bottom:1rem;">
+          <div class="edu-icon-wrap" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="edu-dates">Dec 2017 — Dec 2021</div>
+            <h3 class="edu-degree">BS Software Engineering</h3>
+            <p class="edu-institution">UAJ&amp;K — University of Azad Jammu &amp; Kashmir<br/>Muzaffarabad, Azad Kashmir &nbsp;|&nbsp; CGPA: 2.8</p>
+            <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+              <span class="project-tag">Web Design &amp; Dev</span>
+              <span class="project-tag">ASP .NET</span>
+              <span class="project-tag">C#</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">ANN</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card">
+          <div class="edu-icon-wrap" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="edu-dates">Mar 2015 — Mar 2017</div>
+            <h3 class="edu-degree">ICS — Intermediate</h3>
+            <p class="edu-institution">Allama Iqbal Model College<br/>Bagh, Azad Kashmir &nbsp;|&nbsp; 70%</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="reveal-right">
+        <h2 class="edu-section-heading">Certifications</h2>
+        <div class="edu-underline" aria-hidden="true"></div>
+
+        <div class="cert-list">
+
+          <div class="cert-item">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div class="cert-name">
+              <strong>WordPress Development</strong>
+              Digiskills — Aug 2018
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div class="cert-name">
+              <strong>Freelancing</strong>
+              Digiskills — Aug 2018
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div class="cert-name">
+              <strong>Graphic Design</strong>
+              Digiskills — Aug 2018
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+              </svg>
+            </div>
+            <div class="cert-name">
+              <strong>Web Design &amp; Development</strong>
+              Freelancing — 2018 – Present
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="cert-name">
+              <strong>Angular &amp; .NET Core Development</strong>
+              Professional Practice — Media@Marsons, 2023–2025
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="cert-name">
+              <strong>Full Stack Web Development</strong>
+              Professional Practice — Oxygen Soft, 2022–2023
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Home">
+          <div class="logo-box" aria-hidden="true">SI</div>
+          <div class="logo-text">
+            <span class="logo-name">M Sohaib Ishaque</span>
+            <span class="logo-role">Full Stack Web Developer</span>
+          </div>
+        </a>
+        <p>Building digital experiences that make an impact. Clean code, modern design, scalable solutions.</p>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" style="color:var(--accent)">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="testimonials.html">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Technologies</p>
+        <nav class="footer-links" aria-label="Technology links">
+          <a href="skills.html">Angular &amp; React</a>
+          <a href="skills.html">Next.js</a>
+          <a href="skills.html">Node.js</a>
+          <a href="skills.html">TypeScript</a>
+          <a href="skills.html">MongoDB</a>
+          <a href="skills.html">Tailwind CSS</a>
+        </nav>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Let's Connect</p>
+        <div class="social-links" role="list" aria-label="Social media">
+          <a href="https://github.com/Sohaib-Ishaque/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/sohaibishaque" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://engineersohaibishaque.com" class="social-link" aria-label="Website" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+          <a href="mailto:engineer.sohaibishaque@gmail.com" class="social-link" aria-label="Email" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+        <p style="font-size:0.75rem;color:var(--gray);margin-top:1rem;font-family:var(--font-mono);">
+          Available for freelance work<br/>and exciting opportunities.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2024 <span>M Sohaib Ishaque</span>. All rights reserved.
+      </p>
+      <p class="footer-copy" style="display:flex;align-items:center;gap:0.4rem;">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        Designed &amp; Built with passion
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/textures.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

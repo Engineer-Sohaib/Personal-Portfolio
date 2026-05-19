@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Al Tahaluf's Admin Panel — Project Details | M Sohaib Ishaque Full Stack Web Developer" />
+  <title>Al Tahaluf's Admin Panel — M Sohaib Ishaque</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+ <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23A3FF12'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='14' fill='%23000'%3ESI%3C/text%3E%3C/svg%3E"
+/>
+
+  <style>
+  </style>
+</head>
+<body>
+
+<div class="cursor"      aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+<button class="back-top" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 12V4M4 8l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+
+    <!-- ════════════════════════════════════════
+     Customization Tab
+════════════════════════════════════════ -->
+    <button class="customize" id="customizeBtn" aria-label="Customize" aria-expanded="false" aria-controls="customizePanel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.4 15.05L18.3 17.05C18.1 17.4 17.7 17.6 17.3 17.5L15.3 16.95C14.9 17.2 14.5 17.4 14.1 17.55L13.7 19.6C13.6 20 13.3 20.3 12.9 20.3H11.1C10.7 20.3 10.4 20 10.3 19.6L9.9 17.55C9.5 17.4 9.1 17.2 8.7 16.95L6.7 17.5C6.3 17.6 5.9 17.4 5.7 17.05L4.6 15.05C4.4 14.7 4.5 14.3 4.8 14.1L6.4 12.9C6.3 12.6 6.3 12.3 6.3 12C6.3 11.7 6.3 11.4 6.4 11.1L4.8 9.9C4.5 9.7 4.4 9.3 4.6 8.95L5.7 6.95C5.9 6.6 6.3 6.4 6.7 6.5L8.7 7.05C9.1 6.8 9.5 6.6 9.9 6.45L10.3 4.4C10.4 4 10.7 3.7 11.1 3.7H12.9C13.3 3.7 13.6 4 13.7 4.4L14.1 6.45C14.5 6.6 14.9 6.8 15.3 7.05L17.3 6.5C17.7 6.4 18.1 6.6 18.3 6.95L19.4 8.95C19.6 9.3 19.5 9.7 19.2 9.9L17.6 11.1C17.7 11.4 17.7 11.7 17.7 12C17.7 12.3 17.7 12.6 17.6 12.9L19.2 14.1C19.5 14.3 19.6 14.7 19.4 15.05Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <!-- ════════════════════════════════════════
+     Customize Dropdown Panel
+════════════════════════════════════════ -->
+    <div class="customize-panel" id="customizePanel" aria-hidden="true" role="dialog" aria-label="Theme settings">
+
+        <!-- Panel header -->
+        <div class="cp-header">
+            <div class="cp-header-left">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1l1.5 3.5L13 6l-3.5 1.5L8 11 6.5 7.5 3 6l3.5-1.5z" fill="rgba(180,150,255,0.9)" />
+                    <circle cx="13" cy="2" r="1" fill="rgba(180,150,255,0.7)" />
+                </svg>
+                <span>Customization</span>
+            </div>
+            <button class="cp-close" id="customizePanelClose" aria-label="Close customize panel">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <line x1="2" y1="2" x2="12" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <line x1="12" y1="2" x2="2" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Accent line -->
+        <div class="cp-accent-bar" aria-hidden="true"></div>
+        <div class="cp-streak" aria-hidden="true"></div>
+
+        <!-- ── Section: Theme Mode ── -->
+        <p class="cp-section-label">
+            Theme
+        </p>
+
+        <div class="cp-theme-grid" id="cpThemeGrid">
+
+            <!-- Light -->
+            <div class="cp-theme-card" data-theme="light" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <line x1="12" y1="2" x2="12" y2="4" />
+                        <line x1="12" y1="20" x2="12" y2="22" />
+                        <line x1="2" y1="12" x2="4" y2="12" />
+                        <line x1="20" y1="12" x2="22" y2="12" />
+                        <line x1="4.93" y1="4.93" x2="6.34" y2="6.34" />
+                        <line x1="17.66" y1="17.66" x2="19.07" y2="19.07" />
+                        <line x1="4.93" y1="19.07" x2="6.34" y2="17.66" />
+                        <line x1="17.66" y1="6.34" x2="19.07" y2="4.93" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dark (default) -->
+            <div class="cp-theme-card active" data-theme="dark" role="radio" aria-checked="true" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.95)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- System -->
+            <div class="cp-theme-card" data-theme="system" role="radio" aria-checked="false" tabindex="0">
+                <div class="cp-icon-wrap">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(200,180,255,0.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ── Section: Preset Themes ── -->
+        <div class="cp-presets-header">
+            <div>
+                <p class="cp-section-label" style="margin-bottom:2px">Preset Themes</p>
+            </div>
+        </div>
+
+        <div class="cp-carousel-wrap">
+            <div class="cp-carousel" id="cpSwatchCarousel">
+
+                <div class="cp-swatch" data-swatch="deep-violet">
+                    <div class="cp-swatch-box active" style="background:linear-gradient(135deg,#A3FF12 0%,#89d313 50%,#6ca116 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#7c3aed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Deep Violet</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="electric-blue">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#1e40af 0%,#2563eb 50%,#60a5fa 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Electric Blue</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="warm-amber">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#b45309 0%,#f59e0b 50%,#fcd34d 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Warm Amber</div>
+                </div>
+
+                <div class="cp-swatch" data-swatch="soft-rose">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#9f1239 0%,#f43f5e 50%,#fda4af 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#f43f5e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Soft Rose</div>
+                </div>
+                <div class="cp-swatch" data-swatch="sunset-orange">
+                    <div class="cp-swatch-box" style="background:linear-gradient(135deg,#c2410c 0%,#ea580c 50%,#fb923c 100%)">
+                        <div class="cp-check" aria-hidden="true">
+                            <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
+                                <polyline points="2,5 4,7.5 8,3" stroke="#ea580c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="cp-swatch-radio" aria-hidden="true"></div>
+                    </div>
+                    <div class="cp-swatch-label">Sunset Orange</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /.customize-panel -->
+<!-- ════════════════ MOBILE MENU ════════════════ -->
+<nav class="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html#home"         class="mobile-nav-link">Home</a>
+  <a href="about.html"              class="mobile-nav-link">About</a>
+  <a href="index.html#skills"       class="mobile-nav-link">Skills</a>
+  <a href="index.html#projects"     class="mobile-nav-link" style="color:var(--accent)">Projects</a>
+  <a href="index.html#experience"   class="mobile-nav-link">Experience</a>
+  <a href="index.html#testimonials" class="mobile-nav-link">Testimonials</a>
+  <a href="contact.html"            class="mobile-nav-link">Contact</a>
+</nav>
+
+<!-- ════════════════ NAVBAR ════════════════ -->
+<header class="navbar scrolled" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Home">
+        <div class="logo-box" aria-hidden="true">SI</div>
+        <div class="logo-text">
+          <span class="logo-name">M Sohaib Ishaque</span>
+          <span class="logo-role">Full Stack Web Developer</span>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="index.html#home"         class="nav-link">Home</a>
+        <a href="about.html"              class="nav-link">About</a>
+        <a href="index.html#skills"       class="nav-link">Skills</a>
+        <a href="index.html#projects"     class="nav-link active">Projects</a>
+        <a href="index.html#experience"   class="nav-link">Experience</a>
+        <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+        <a href="contact.html"            class="nav-link">Contact</a>
+      </nav>
+      <a href="contact.html" class="nav-cta">
+        Let's Talk
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════
+     HERO — Project Intro
+════════════════════════════════════════ -->
+<section class="pd-hero" aria-label="Project hero">
+  <div class="pd-hero-bg"   aria-hidden="true"></div>
+  <div class="pd-hero-glow" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="pd-hero-inner">
+
+      <!-- Left: Info -->
+      <div class="reveal-left">
+        <a href="projects.html" class="pd-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Back to Projects
+        </a>
+
+        <p class="pd-category">Enterprise Platform · Angular / .NET Core</p>
+
+        <h1 class="pd-title">
+          Al Tahaluf's
+          <span>Admin Panel.</span>
+        </h1>
+
+        <p class="pd-desc">
+          A full-stack enterprise web platform with a custom admin panel, built with Angular and .NET Core — featuring role-based access, RESTful APIs and a scalable architecture for managing business operations at scale.
+        </p>
+
+        <div class="pd-tags">
+          <span class="pd-tag">Angular</span>
+          <span class="pd-tag">.NET Core</span>
+          <span class="pd-tag">SQL Server</span>
+          <span class="pd-tag">Entity Framework</span>
+          <span class="pd-tag">RxJS</span>
+        </div>
+
+        <div class="pd-btns">
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            View Live Project
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Sohaib-Ishaque/" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            View Source Code
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Real Screenshot -->
+      <div class="pd-mockup reveal-right">
+        <div class="pd-mockup-window">
+          <div class="pd-mockup-bar">
+            <div class="pd-mockup-dots">
+              <div class="pd-mockup-dot"></div>
+              <div class="pd-mockup-dot"></div>
+              <div class="pd-mockup-dot"></div>
+            </div>
+            <div class="pd-mockup-url">al-tahaluf.com/admin</div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--gray);flex-shrink:0" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div style="position:relative;overflow:hidden;line-height:0;">
+            <img src="./assets/images/al-tahaluf-.webp" alt="Al Tahaluf's Admin Login Panel" style="width:100%;display:block;max-height:320px;object-fit:cover;object-position:top;" loading="eager" />
+          </div>
+        </div>
+        <div class="pd-mockup-deco" aria-hidden="true"></div>
+        <div class="pd-mockup-tri"  aria-hidden="true"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     OVERVIEW + GALLERY
+════════════════════════════════════════ -->
+<section class="pd-section pd-section-alt" aria-label="Project overview and gallery">
+  <div class="container">
+    <div class="pd-two-col">
+
+      <!-- Overview -->
+      <div class="reveal-left">
+        <h2 class="pd-section-heading">Project Overview</h2>
+        <div class="pd-section-underline"></div>
+        <p class="pd-section-body">
+          Al Tahaluf's is a full enterprise web platform built with Angular on the frontend and .NET Core on the backend. The system features a custom admin panel for user and content management, reusable Angular component architecture, lazy loading and RxJS-based state management — giving the business full control over their operations through a clean, responsive dashboard.
+        </p>
+        <div class="pd-feature-list">
+          <div class="pd-feature-item">
+            <div class="pd-feature-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            Secure admin login with role-based access control
+          </div>
+          <div class="pd-feature-item">
+            <div class="pd-feature-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 11 12 14 22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+            </div>
+            RESTful API integration with Entity Framework & LINQ
+          </div>
+          <div class="pd-feature-item">
+            <div class="pd-feature-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            Reusable Angular components with lazy loading
+          </div>
+          <div class="pd-feature-item">
+            <div class="pd-feature-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            SQL Server database with optimised queries
+          </div>
+          <div class="pd-feature-item">
+            <div class="pd-feature-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            Fully responsive design for all screen sizes
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="reveal-right">
+        <h2 class="pd-section-heading">Project Gallery</h2>
+        <div class="pd-section-underline"></div>
+        <div class="pd-gallery">
+          <div class="pd-gallery-item">
+            <img src="al-th.png" alt="Al Tahaluf Admin Login" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" loading="lazy" />
+            <div class="pd-gallery-overlay">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pd-gallery-item">
+            <img src="Ns-al-th.png" alt="NSRIC Education Platform" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" loading="lazy" />
+            <div class="pd-gallery-overlay">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pd-gallery-item">
+            <img src="ST.webp" alt="Simplicity Trading Academy" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" loading="lazy" />
+            <div class="pd-gallery-overlay">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+                <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="pd-gallery-dots" aria-label="Gallery navigation">
+          <div class="pd-gallery-dot active"></div>
+          <div class="pd-gallery-dot"></div>
+          <div class="pd-gallery-dot"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     KEY FEATURES + TECHNOLOGIES
+════════════════════════════════════════ -->
+<section class="pd-section" aria-label="Key features and technologies">
+  <div class="container">
+    <div class="pd-two-col">
+
+      <!-- Features -->
+      <div class="reveal-left">
+        <h2 class="pd-section-heading">Key Features</h2>
+        <div class="pd-section-underline"></div>
+        <div class="pd-features-grid">
+
+          <div class="pd-feature-card">
+            <div class="pd-feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <p class="pd-feature-card-title">Admin Authentication</p>
+            <p class="pd-feature-card-desc">Secure email/password login with JWT tokens and session handling.</p>
+          </div>
+
+          <div class="pd-feature-card">
+            <div class="pd-feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <p class="pd-feature-card-title">Role-Based Access</p>
+            <p class="pd-feature-card-desc">Admin, manager and viewer roles with granular permissions.</p>
+          </div>
+
+          <div class="pd-feature-card">
+            <div class="pd-feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <p class="pd-feature-card-title">RESTful API</p>
+            <p class="pd-feature-card-desc">.NET Core APIs with Entity Framework, LINQ and optimised SQL queries.</p>
+          </div>
+
+          <div class="pd-feature-card">
+            <div class="pd-feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+            </div>
+            <p class="pd-feature-card-title">Lazy Loading</p>
+            <p class="pd-feature-card-desc">Angular lazy-loaded modules for fast initial page load times.</p>
+          </div>
+
+          <div class="pd-feature-card">
+            <div class="pd-feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <p class="pd-feature-card-title">Responsive Design</p>
+            <p class="pd-feature-card-desc">Fully responsive UI across desktop, tablet and mobile screens.</p>
+          </div>
+
+          <div class="pd-feature-card">
+            <div class="pd-feature-card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+                <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+              </svg>
+            </div>
+            <p class="pd-feature-card-title">SQL Server DB</p>
+            <p class="pd-feature-card-desc">Optimised relational schema with stored procedures and indexes.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Technologies -->
+      <div class="reveal-right">
+        <h2 class="pd-section-heading">Technologies Used</h2>
+        <div class="pd-section-underline"></div>
+
+        <div class="pd-tech-icons">
+          <div class="pd-tech-icon-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-label="Angular">
+              <polygon points="12 2 2 7 4.09 18.09 12 22 19.91 18.09 22 7 12 2"/>
+              <polyline points="12 2 12 22"/><line x1="2" y1="7" x2="22" y2="7"/>
+            </svg>
+            <span class="pd-tech-icon-label">Angular</span>
+          </div>
+          <div class="pd-tech-icon-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-label=".NET Core">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="pd-tech-icon-label">.NET Core</span>
+          </div>
+          <div class="pd-tech-icon-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-label="SQL Server">
+              <ellipse cx="12" cy="5" rx="9" ry="3"/>
+              <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+              <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+            </svg>
+            <span class="pd-tech-icon-label">SQL Server</span>
+          </div>
+          <div class="pd-tech-icon-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-label="TypeScript">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+            <span class="pd-tech-icon-label">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="pd-tech-table">
+          <div class="pd-tech-row">
+            <div class="pd-tech-key">Frontend</div>
+            <div class="pd-tech-val">Angular 16, TypeScript, Bootstrap 5</div>
+          </div>
+          <div class="pd-tech-row">
+            <div class="pd-tech-key">Backend</div>
+            <div class="pd-tech-val">.NET Core 7, C#, Entity Framework</div>
+          </div>
+          <div class="pd-tech-row">
+            <div class="pd-tech-key">Database</div>
+            <div class="pd-tech-val">SQL Server, LINQ queries</div>
+          </div>
+          <div class="pd-tech-row">
+            <div class="pd-tech-key">Authentication</div>
+            <div class="pd-tech-val">JWT, ASP.NET Identity, RBAC</div>
+          </div>
+          <div class="pd-tech-row">
+            <div class="pd-tech-key">State Mgmt</div>
+            <div class="pd-tech-val">RxJS, Angular Services</div>
+          </div>
+          <div class="pd-tech-row">
+            <div class="pd-tech-key">Version Control</div>
+            <div class="pd-tech-val">Git, GitHub</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     PROJECT IMPACT + CLIENT TESTIMONIAL
+════════════════════════════════════════ -->
+<section class="pd-section pd-section-alt" aria-label="Project impact and testimonial">
+  <div class="container">
+
+    <!-- Impact Stats -->
+    <div class="reveal" style="margin-bottom:5rem">
+      <h2 class="pd-section-heading">Project Impact</h2>
+      <div class="pd-section-underline"></div>
+
+      <div class="pd-impact-grid">
+        <div class="pd-impact-item">
+          <div class="pd-impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <div class="pd-impact-num" data-target="45" data-suffix="%">45%</div>
+          <div class="pd-impact-label">Increase in sales<br>performance</div>
+        </div>
+        <div class="pd-impact-item">
+          <div class="pd-impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="pd-impact-num" data-target="30" data-suffix="%">30%</div>
+          <div class="pd-impact-label">Faster decision<br>making</div>
+        </div>
+        <div class="pd-impact-item">
+          <div class="pd-impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="pd-impact-num" style="font-size:2rem" data-target="999" data-suffix="%">99.9%</div>
+          <div class="pd-impact-label">Uptime and<br>reliability</div>
+        </div>
+        <div class="pd-impact-item">
+          <div class="pd-impact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="pd-impact-num">2K+</div>
+          <div class="pd-impact-label">Active users<br>worldwide</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="pd-two-col">
+      <div></div><!-- spacer -->
+      <div class="reveal-right">
+        <h2 class="pd-section-heading">Client Testimonial</h2>
+        <div class="pd-section-underline"></div>
+        <div class="pd-testimonial">
+          <div class="pd-testimonial-quote" aria-hidden="true">"</div>
+          <p class="pd-testimonial-text">
+            The dashboard has transformed the way we monitor our business. The real-time insights and beautiful visualizations help us make data-driven decisions faster.
+          </p>
+          <div class="pd-testimonial-author">
+            <div class="pd-testimonial-person">
+              <div class="pd-testimonial-avatar" aria-label="Michael Chen avatar">MC</div>
+              <div>
+                <div class="pd-testimonial-name">Michael Chen</div>
+                <div class="pd-testimonial-role">Founder, ShopMax</div>
+              </div>
+            </div>
+            <div class="pd-testimonial-nav" aria-label="Testimonial navigation">
+              <button class="pd-testimonial-btn" aria-label="Previous testimonial">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button class="pd-testimonial-btn" aria-label="Next testimonial">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     CTA BANNER
+════════════════════════════════════════ -->
+<section class="pd-cta" aria-label="Call to action">
+  <div class="container">
+    <div class="pd-cta-inner reveal">
+      <div>
+        <h2 class="pd-cta-heading">Have a similar project in mind?</h2>
+        <p class="pd-cta-sub">Let's collaborate and build something amazing together.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary">
+        LET'S TALK
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Home">
+          <div class="logo-box" aria-hidden="true">SI</div>
+          <div class="logo-text">
+            <span class="logo-name">M Sohaib Ishaque</span>
+            <span class="logo-role">Full Stack Web Developer</span>
+          </div>
+        </a>
+        <p>Building digital experiences that make impact.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html#home">Home</a>
+          <a href="about.html">About</a>
+          <a href="index.html#skills">Skills</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-col-title">Technologies</p>
+        <nav class="footer-links" aria-label="Technologies">
+          <a href="index.html#skills">React</a>
+          <a href="index.html#skills">Next.js</a>
+          <a href="index.html#skills">Node.js</a>
+          <a href="index.html#skills">TypeScript</a>
+          <a href="index.html#skills">MongoDB</a>
+          <a href="index.html#skills">Tailwind CSS</a>
+        </nav>
+      </div>
+      <div>
+        <p class="footer-col-title">Let's Connect</p>
+        <p style="font-size:0.82rem;color:var(--gray);margin-bottom:1rem;max-width:200px;line-height:1.6;">
+          Available for freelance work and exciting opportunities.
+        </p>
+        <div class="footer-social social-links" role="list" aria-label="Social media">
+          <a href="https://github.com/Sohaib-Ishaque/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/sohaibishaque" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="https://engineersohaibishaque.com" class="social-link" aria-label="Website" target="_blank" rel="noopener noreferrer" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+          <a href="mailto:engineer.sohaibishaque@gmail.com" class="social-link" aria-label="Email" role="listitem">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2024 <span>M Sohaib Ishaque</span>. All rights reserved.</p>
+      <p class="footer-copy" style="display:flex;align-items:center;gap:0.4rem">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" aria-hidden="true">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        Designed &amp; Built with passion &nbsp;·&nbsp; using Next.js &amp; Tailwind CSS
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/constants.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/textures.js"></script>
+<script src="js/interactions.js"></script>
+<script src="js/main.js"></script>
+<script>
+  /* Gallery dot interaction */
+  document.querySelectorAll('.pd-gallery-dot').forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      document.querySelectorAll('.pd-gallery-dot').forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+    });
+  });
+
+  /* Animate impact counters on scroll */
+  const impactObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('[data-target]').forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          const suffix = el.dataset.suffix || '';
+          let cur = 0;
+          const inc = target / (1800 / 16);
+          const timer = setInterval(() => {
+            cur += inc;
+            if (cur >= target) { cur = target; clearInterval(timer); }
+            el.textContent = Math.floor(cur) + suffix;
+          }, 16);
+        });
+        impactObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelector('.pd-impact-grid') && impactObserver.observe(document.querySelector('.pd-impact-grid'));
+</script>
+
+</body>
+</html>
